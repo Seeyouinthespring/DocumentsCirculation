@@ -58,12 +58,12 @@ namespace DocumentsCirculation.DAO
                 SqlCommand addparent = new SqlCommand("insert into Document (name, creationdate, authorID, status, comment, shelflife, signerID, type) "
                     + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type)", Connection);
                 SqlCommand addheir = new SqlCommand("insert into DocumentReport (startdate, enddate, stats, documentID)"
-                    + "values (@startdate, @enddate, @stats, @documentID)");
+                    + "values (@startdate, @enddate, @stats, @documentID)", Connection);
 
                 addparent.Parameters.Add(new SqlParameter("@name", report.name));
                 addparent.Parameters.Add(new SqlParameter("@creationdate", report.creationdate));
                 addparent.Parameters.Add(new SqlParameter("@authorID", report.authorID));
-                addparent.Parameters.Add(new SqlParameter("@status", report.status));
+                addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
                 addparent.Parameters.Add(new SqlParameter("@comment", report.comment));
                 addparent.Parameters.Add(new SqlParameter("@shelflife", report.shelflife));
                 addparent.Parameters.Add(new SqlParameter("@signerID", report.signerID));
@@ -86,28 +86,28 @@ namespace DocumentsCirculation.DAO
             return result;
         }
 
-        public bool DropReport(int id)
-        {
-            bool result = true;
-            Connect();
+        //public bool DropReport(int id)
+        //{
+        //    bool result = true;
+        //    Connect();
 
-            try
-            {
-                string forheir = string.Format("Delete from DocumentReport where documentID='{0}'", id);
-                string forparent = string.Format("Delete from Document where documentID='{0}'", id);
-                SqlCommand dropheir = new SqlCommand(forheir, Connection);
-                SqlCommand dropparent = new SqlCommand(forparent, Connection);
+        //    try
+        //    {
+        //        string forheir = string.Format("Delete from DocumentReport where documentID='{0}'", id);
+        //        string forparent = string.Format("Delete from Document where documentID='{0}'", id);
+        //        SqlCommand dropheir = new SqlCommand(forheir, Connection);
+        //        SqlCommand dropparent = new SqlCommand(forparent, Connection);
 
-                dropheir.ExecuteNonQuery();
-                dropparent.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                result = false;
-            }
-            finally { Disconnect(); }
-            return result;
-        }
+        //        dropheir.ExecuteNonQuery();
+        //        dropparent.ExecuteNonQuery();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        result = false;
+        //    }
+        //    finally { Disconnect(); }
+        //    return result;
+        //}
 
         public bool ChangeReport(int id, DocumentReport report)
         {
@@ -118,7 +118,7 @@ namespace DocumentsCirculation.DAO
             {
                 string forheir = string.Format("update DocumentSale set startdate=@startdate, enddate=@enddate, stats=@stats where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
-                    " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type");
+                    " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type where documentID='{0}'", id);
                 SqlCommand changeheir = new SqlCommand(forheir, Connection);
                 SqlCommand changeparent = new SqlCommand(forparent, Connection);
 
@@ -129,7 +129,7 @@ namespace DocumentsCirculation.DAO
                 changeparent.Parameters.AddWithValue("@name", report.name);
                 changeparent.Parameters.AddWithValue("@creationdate", report.creationdate);
                 changeparent.Parameters.AddWithValue("@authorID", report.authorID);
-                changeparent.Parameters.AddWithValue("@status", report.status);
+                changeparent.Parameters.AddWithValue("@status", "Создан");
                 changeparent.Parameters.AddWithValue("@shelflife", report.shelflife);
                 changeparent.Parameters.AddWithValue("@signerID", report.signerID);
                 changeparent.Parameters.AddWithValue("@type", report.type);

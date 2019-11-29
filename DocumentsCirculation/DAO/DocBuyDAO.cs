@@ -59,12 +59,12 @@ namespace DocumentsCirculation.DAO
                 SqlCommand addparent = new SqlCommand("insert into Document (name, creationdate, authorID, status, comment, shelflife, signerID, type) "
                     + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type)", Connection);
                 SqlCommand addheir = new SqlCommand("insert into DocumentSale (productname, productammount_killo, productprice, sellerID, documentID)"
-                    + "values (@productname, @productammount_killo, @productprice, @sellerID, @documentID)");
+                    + "values (@productname, @productammount_killo, @productprice, @sellerID, @documentID)", Connection);
 
                 addparent.Parameters.Add(new SqlParameter("@name", buy.name));
                 addparent.Parameters.Add(new SqlParameter("@creationdate", buy.creationdate));
                 addparent.Parameters.Add(new SqlParameter("@authorID", buy.authorID));
-                addparent.Parameters.Add(new SqlParameter("@status", buy.status));
+                addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
                 addparent.Parameters.Add(new SqlParameter("@comment", buy.comment));
                 addparent.Parameters.Add(new SqlParameter("@shelflife", buy.shelflife));
                 addparent.Parameters.Add(new SqlParameter("@signerID", buy.signerID));
@@ -88,28 +88,28 @@ namespace DocumentsCirculation.DAO
             return result;
         }
 
-        public bool DropBuy(int id)
-        {
-            bool result = true;
-            Connect();
+        //public bool DropBuy(int id)
+        //{
+        //    bool result = true;
+        //    Connect();
 
-            try
-            {
-                string forheir = string.Format("Delete from DocumentBuy where documentID='{0}'", id);
-                string forparent = string.Format("Delete from Document where documentID='{0}'", id);
-                SqlCommand dropheir = new SqlCommand(forheir, Connection);
-                SqlCommand dropparent = new SqlCommand(forparent, Connection);
+        //    try
+        //    {
+        //        string forheir = string.Format("Delete from DocumentBuy where documentID='{0}'", id);
+        //        string forparent = string.Format("Delete from Document where documentID='{0}'", id);
+        //        SqlCommand dropheir = new SqlCommand(forheir, Connection);
+        //        SqlCommand dropparent = new SqlCommand(forparent, Connection);
 
-                dropheir.ExecuteNonQuery();
-                dropparent.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                result = false;
-            }
-            finally { Disconnect(); }
-            return result;
-        }
+        //        dropheir.ExecuteNonQuery();
+        //        dropparent.ExecuteNonQuery();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        result = false;
+        //    }
+        //    finally { Disconnect(); }
+        //    return result;
+        //}
 
         public bool ChangeBuy(int id, DocumentBuy buy)
         {
@@ -121,7 +121,7 @@ namespace DocumentsCirculation.DAO
                 string forheir = string.Format("update DocumentSale set productname=@productname, productammount_killo=@productammount_killo, " +
                     "productprice=@productprice, sellerID=@sellerID where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
-                    " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type");
+                    " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type where documentID='{0}'", id);
                 SqlCommand changeheir = new SqlCommand(forheir, Connection);
                 SqlCommand changeparent = new SqlCommand(forparent, Connection);
 
@@ -133,7 +133,7 @@ namespace DocumentsCirculation.DAO
                 changeparent.Parameters.AddWithValue("@name", buy.name);
                 changeparent.Parameters.AddWithValue("@creationdate", buy.creationdate);
                 changeparent.Parameters.AddWithValue("@authorID", buy.authorID);
-                changeparent.Parameters.AddWithValue("@status", buy.status);
+                changeparent.Parameters.AddWithValue("@status", "Создан");
                 changeparent.Parameters.AddWithValue("@shelflife", buy.shelflife);
                 changeparent.Parameters.AddWithValue("@signerID", buy.signerID);
                 changeparent.Parameters.AddWithValue("@type", buy.type);

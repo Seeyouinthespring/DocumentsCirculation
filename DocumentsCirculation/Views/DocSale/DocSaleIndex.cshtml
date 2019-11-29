@@ -1,0 +1,99 @@
+﻿@model IEnumerable<DocumentsCirculation.Models.DocumentSale>
+
+@{
+    ViewBag.Title = "DocSaleIndex";
+}
+
+<h2>DocSaleIndex</h2>
+
+<p>
+    @Html.ActionLink("Добавить документ типа продажи", "DocSaleCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creationdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.authorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shelflife)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.signerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productammount_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productprice_for_one)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.buyerID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.creationdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.authorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shelflife)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.signerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productammount_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productprice_for_one)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.buyerID)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать документ", "DocSaleEdit", new {  id=item.documentID }) |
+            @Html.ActionLink("Просмотр документа", "DocSaleDetails", new {  id=item.documentID }) |
+            @Html.ActionLink("Удалить документ", "DocSaleDelete", new {  id=item.documentID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -58,12 +58,12 @@ namespace DocumentsCirculation.DAO
                 SqlCommand addparent = new SqlCommand("insert into Document (name, creationdate, authorID, status, comment, shelflife, signerID, type) "
                     + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type)", Connection);
                 SqlCommand addheir = new SqlCommand("insert into DocumentSale (moneydifference, targetID, documentID)"
-                    + "values (@moneydifference, @targetID, @documentID)");
+                    + "values (@moneydifference, @targetID, @documentID)", Connection);
 
                 addparent.Parameters.Add(new SqlParameter("@name", inside.name));
                 addparent.Parameters.Add(new SqlParameter("@creationdate", inside.creationdate));
                 addparent.Parameters.Add(new SqlParameter("@authorID", inside.authorID));
-                addparent.Parameters.Add(new SqlParameter("@status", inside.status));
+                addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
                 addparent.Parameters.Add(new SqlParameter("@comment", inside.comment));
                 addparent.Parameters.Add(new SqlParameter("@shelflife", inside.shelflife));
                 addparent.Parameters.Add(new SqlParameter("@signerID", inside.signerID));
@@ -85,28 +85,28 @@ namespace DocumentsCirculation.DAO
             return result;
         }
 
-        public bool DropInside(int id)
-        {
-            bool result = true;
-            Connect();
+        //public bool DropInside(int id)
+        //{
+        //    bool result = true;
+        //    Connect();
 
-            try
-            {
-                string forheir = string.Format("Delete from DocumentInside where documentID='{0}'", id);
-                string forparent = string.Format("Delete from Document where documentID='{0}'", id);
-                SqlCommand dropheir = new SqlCommand(forheir, Connection);
-                SqlCommand dropparent = new SqlCommand(forparent, Connection);
+        //    try
+        //    {
+        //        string forheir = string.Format("Delete from DocumentInside where documentID='{0}'", id);
+        //        string forparent = string.Format("Delete from Document where documentID='{0}'", id);
+        //        SqlCommand dropheir = new SqlCommand(forheir, Connection);
+        //        SqlCommand dropparent = new SqlCommand(forparent, Connection);
 
-                dropheir.ExecuteNonQuery();
-                dropparent.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                result = false;
-            }
-            finally { Disconnect(); }
-            return result;
-        }
+        //        dropheir.ExecuteNonQuery();
+        //        dropparent.ExecuteNonQuery();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        result = false;
+        //    }
+        //    finally { Disconnect(); }
+        //    return result;
+        //}
 
         public bool ChangeInside(int id, DocumentInside inside)
         {
@@ -118,7 +118,7 @@ namespace DocumentsCirculation.DAO
                 string forheir = string.Format("update DocumentInside set moneydifference=@moneydifference, targetID=@targetID, " +
                     "where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
-                    " status=@status, shelflife=@shelflife, signerID=@signerID");
+                    " status=@status, shelflife=@shelflife, signerID=@signerID where documentID='{0}'", id);
                 SqlCommand changeheir = new SqlCommand(forheir, Connection);
                 SqlCommand changeparent = new SqlCommand(forparent, Connection);
 
@@ -128,7 +128,7 @@ namespace DocumentsCirculation.DAO
                 changeparent.Parameters.AddWithValue("@name", inside.name);
                 changeparent.Parameters.AddWithValue("@creationdate", inside.creationdate);
                 changeparent.Parameters.AddWithValue("@authorID", inside.authorID);
-                changeparent.Parameters.AddWithValue("@status", inside.status);
+                changeparent.Parameters.AddWithValue("@status", "Создан");
                 changeparent.Parameters.AddWithValue("@shelflife", inside.shelflife);
                 changeparent.Parameters.AddWithValue("@signerID", inside.signerID);
                 changeparent.Parameters.AddWithValue("@type", inside.type);
