@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -183,6 +186,7 @@
     <Compile Include="DAO\DocInsideDAO.cs" />
     <Compile Include="DAO\DocReportDAO.cs" />
     <Compile Include="DAO\DocSaleDAO.cs" />
+    <Compile Include="DAO\Logger.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,6 +262,8 @@
     <Content Include="Views\DocSale\DocSaleIndex.cshtml" />
     <Content Include="Views\DocSale\DocSaleDetails.cshtml" />
     <Content Include="Views\DocSale\DocSaleCreate.cshtml" />
+    <Content Include="Views\DocSale\DocSaleEdit.cshtml" />
+    <Content Include="Views\DocSale\DocSaleDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

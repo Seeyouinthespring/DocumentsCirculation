@@ -119,3 +119,5 @@ C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.csproj.CopyComplete
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.dll
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.pdb
+C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\log4net.dll
+C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\log4net.xml

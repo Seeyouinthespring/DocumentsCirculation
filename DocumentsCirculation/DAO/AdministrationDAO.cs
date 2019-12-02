@@ -10,8 +10,12 @@ namespace DocumentsCirculation.DAO
     {
         public bool DropDoc(int id)
         {
+            Logger.InitLogger();
+            Logger.Log.Info("Метод удаления записи");
+
             bool result = true;
             Connect();
+            Document doc = new Document();
             //string type;
 
             try
@@ -34,35 +38,37 @@ namespace DocumentsCirculation.DAO
                 SqlDataReader reader = gettype.ExecuteReader();
                 while (reader.Read())
                 {
-                    string type;
-                    type = Convert.ToString(reader["type"]);
-                    switch (type)
-                    {
-                        case "Продажи":
-                            dropsale.ExecuteNonQuery();
-                            dropparent.ExecuteNonQuery();
-                            break;
-                        case "Покупки":
-                            dropbuy.ExecuteNonQuery();
-                            dropparent.ExecuteNonQuery();
-                            break;
-                        case "Внутренний":
-                            dropinside.ExecuteNonQuery();
-                            dropparent.ExecuteNonQuery();
-                            break;
-                        case "Отчет":
-                            dropreport.ExecuteNonQuery();
-                            dropparent.ExecuteNonQuery();
-                            break;
-                        default:
-                            //ошибка
-                            break;
-                    }
+                    doc.type = Convert.ToString(reader["type"]);
+                    Logger.Log.Info("Значение переменной doc.type:"+doc.type);
                 }
                 reader.Close();
+                Logger.Log.Info("Значение переменной doc.type после закрытия reader:" + doc.type);
+                switch (doc.type)
+                {
+                    case "Продажи":
+                        dropsale.ExecuteNonQuery();
+                        dropparent.ExecuteNonQuery();
+                        break;
+                    case "Покупки":
+                        dropbuy.ExecuteNonQuery();
+                        dropparent.ExecuteNonQuery();
+                        break;
+                    case "Внутренний":
+                        dropinside.ExecuteNonQuery();
+                        dropparent.ExecuteNonQuery();
+                        break;
+                    case "Отчет":
+                        dropreport.ExecuteNonQuery();
+                        dropparent.ExecuteNonQuery();
+                        break;
+                    default:
+                        //ошибка
+                        break;
+                }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }

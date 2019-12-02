@@ -1,0 +1,120 @@
+﻿@model DocumentsCirculation.Models.DocumentSale
+
+@{
+    ViewBag.Title = "DocSaleDelete";
+}
+
+<h2>DocSaleDelete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DocumentSale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creationdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creationdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.authorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.authorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shelflife)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shelflife)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.signerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.signerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productammount_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productammount_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productprice_for_one)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productprice_for_one)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.buyerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.buyerID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "DocSaleIndex")
+        </div>
+    }
+</div>

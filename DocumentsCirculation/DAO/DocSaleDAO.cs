@@ -10,6 +10,8 @@ namespace DocumentsCirculation.DAO
 
         public List<DocumentSale> GetAllSales()
         {
+            Logger.InitLogger();
+            Logger.Log.Info("Метод вызова всех записей");
             Connect();
             List<DocumentSale> DList = new List<DocumentSale>();
             try
@@ -58,37 +60,41 @@ namespace DocumentsCirculation.DAO
             try
             {
                 SqlCommand addparent = new SqlCommand("insert into Document (name, creationdate, authorID, status, comment, shelflife, signerID, type) "
-                    + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type)", Connection);
+                    + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type);", Connection);
                 SqlCommand addheir = new SqlCommand("insert into DocumentSale (productname, productammount_number, productprice, buyerID, documentID)"
-                    + "values (@productname, @productammount_number, @productprice, @buyerID, @documentID)", Connection);
+                    + "values (@productname, @productammount_number, @productprice, @buyerID, @documentID);", Connection);
 
-                addparent.Parameters.Add(new SqlParameter("@name", sale.name));
-                addparent.Parameters.Add(new SqlParameter("@creationdate", sale.creationdate));
-                addparent.Parameters.Add(new SqlParameter("@authorID", sale.authorID));
-                addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
-                addparent.Parameters.Add(new SqlParameter("@comment", sale.comment));
-                addparent.Parameters.Add(new SqlParameter("@shelflife", sale.shelflife));
-                addparent.Parameters.Add(new SqlParameter("@signerID", sale.signerID));
-                addparent.Parameters.Add(new SqlParameter("@type", sale.type));
+                addparent.Parameters.AddWithValue("@name", sale.name);
+                addparent.Parameters.AddWithValue("@creationdate", sale.creationdate);
+                addparent.Parameters.AddWithValue("@authorID", sale.authorID);
+                addparent.Parameters.AddWithValue("@status", "Создан");
+                addparent.Parameters.AddWithValue("@comment", " ");
+                addparent.Parameters.AddWithValue("@shelflife", sale.shelflife);
+                addparent.Parameters.AddWithValue("@signerID", sale.signerID);
+                addparent.Parameters.AddWithValue("@type", sale.type);
 
+                addparent.ExecuteNonQuery();
+                addparent.CommandText = "Select @@Identity";
                 int id = Convert.ToInt32(addparent.ExecuteScalar());
+                Logger.Log.Info("Значение переменной id:"+id);
 
-                addheir.Parameters.Add(new SqlParameter("@productname", sale.productname));
-                addheir.Parameters.Add(new SqlParameter("@productammount_number",sale.productammount_num));
-                addheir.Parameters.Add(new SqlParameter("@productprice", sale.productprice_for_one));
-                addheir.Parameters.Add(new SqlParameter("@buyerID", sale.buyerID));
-                addheir.Parameters.Add(new SqlParameter("@documentID", id));
+                addheir.Parameters.AddWithValue("@productname", sale.productname);
+                addheir.Parameters.AddWithValue("@productammount_number",sale.productammount_num);
+                addheir.Parameters.AddWithValue("@productprice", sale.productprice_for_one);
+                addheir.Parameters.AddWithValue("@buyerID", sale.buyerID);
+                addheir.Parameters.AddWithValue("@documentID", id);
 
                 addheir.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }
             return result;
         }
-
+   
         //public bool DropSale(int id)
         //{
         //    bool result = true;
