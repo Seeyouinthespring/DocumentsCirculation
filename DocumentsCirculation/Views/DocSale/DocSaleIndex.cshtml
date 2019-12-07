@@ -4,7 +4,7 @@
     ViewBag.Title = "DocSaleIndex";
 }
 
-<h2>DocSaleIndex</h2>
+<h2>Список документов продажи</h2>
 
 <p>
     @Html.ActionLink("Добавить документ типа продажи", "DocSaleCreate")
@@ -12,46 +12,40 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.name)
+            Номер документа
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.creationdate)
+            Название
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.authorID)
+            Дата создания
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.status)
+            ID автора
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.comment)
+            Статус
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.shelflife)
+            Комментарий
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.signerID)
+            Хранить до
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.type)
+            ID подписывающего
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.productname)
+            Тип
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productammount_num)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productprice_for_one)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.buyerID)
-        </th>
-        <th></th>
+        <th>Действия</th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.documentID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.name)
         </td>
@@ -77,21 +71,9 @@
             @Html.DisplayFor(modelItem => item.type)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.productname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.productammount_num)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.productprice_for_one)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.buyerID)
-        </td>
-        <td>
-            @Html.ActionLink("Редактировать документ", "DocSaleEdit", new {  id=item.documentID }) |
-            @Html.ActionLink("Просмотр документа", "DocSaleDetails", new {  id=item.documentID }) |
-            @Html.ActionLink("Удалить документ", "DocSaleDelete", new {  id=item.documentID })
+            @Html.ActionLink("Редактировать", "DocSaleEdit", new { id = item.documentID }) |
+            @Html.ActionLink("Просмотреть", "DocSaleDetails", new { id = item.documentID }) |
+            @Html.ActionLink("Удалить", "DocSaleDelete", new { id = item.documentID })
         </td>
     </tr>
 }

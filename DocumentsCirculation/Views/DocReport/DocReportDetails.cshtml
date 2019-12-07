@@ -1,0 +1,106 @@
+﻿@model DocumentsCirculation.Models.DocumentReport
+
+@{
+    ViewBag.Title = "DocReportDetails";
+}
+
+<h2>Просмотр документа отчета</h2>
+
+<div>
+    <h4>Документ отчета</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creationdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creationdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.authorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.authorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shelflife)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shelflife)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.signerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.signerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enddate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enddate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stats)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "DocReportEdit", new { id = Model.documentID }) |
+    @Html.ActionLink("Назад", "DocReportIndex")
+</p>

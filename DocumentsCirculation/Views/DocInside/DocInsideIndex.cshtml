@@ -1,0 +1,87 @@
+﻿@model IEnumerable<DocumentsCirculation.Models.DocumentInside>
+
+@{
+    ViewBag.Title = "DocInsideIndex";
+}
+
+<h2>Список внутренних документов</h2>
+
+<p>
+    @Html.ActionLink("Добавить внутренний документ", "DocInsideCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creationdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.authorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shelflife)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.signerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moneydifference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.targetID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.creationdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.authorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shelflife)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.signerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.moneydifference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.targetID)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "DocInsideEdit", new { id=item.documentID })
+            @Html.ActionLink("Просмотреть", "DocInsideDetails", new { id=item.documentID })
+            @Html.ActionLink("Удалить", "DocInsideDelete", new { id=item.documentID })
+        </td>
+    </tr>
+}
+
+</table>

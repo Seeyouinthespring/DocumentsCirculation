@@ -68,10 +68,10 @@ namespace DocumentsCirculation.DAO
                 addparent.Parameters.AddWithValue("@creationdate", sale.creationdate);
                 addparent.Parameters.AddWithValue("@authorID", sale.authorID);
                 addparent.Parameters.AddWithValue("@status", "Создан");
-                addparent.Parameters.AddWithValue("@comment", " ");
+                addparent.Parameters.AddWithValue("@comment", "");
                 addparent.Parameters.AddWithValue("@shelflife", sale.shelflife);
                 addparent.Parameters.AddWithValue("@signerID", sale.signerID);
-                addparent.Parameters.AddWithValue("@type", sale.type);
+                addparent.Parameters.AddWithValue("@type", "Продажи");
 
                 addparent.ExecuteNonQuery();
                 addparent.CommandText = "Select @@Identity";

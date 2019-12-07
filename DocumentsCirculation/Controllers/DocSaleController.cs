@@ -40,7 +40,7 @@ namespace DocumentsCirculation.Controllers
 
         // POST: DocSale/Create
         [HttpPost]
-        public ActionResult DocSaleCreate(/*[Bind(Exclude ="documentID")]*/ DocumentSale ds)
+        public ActionResult DocSaleCreate( DocumentSale ds)
         {
             try
             {

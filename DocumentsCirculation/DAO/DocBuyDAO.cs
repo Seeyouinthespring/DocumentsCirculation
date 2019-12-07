@@ -9,6 +9,8 @@ namespace DocumentsCirculation.DAO
     {
         public List<DocumentBuy> GetAllBuys()
         {
+            Logger.InitLogger();
+            Logger.Log.Info("Метод вызова всех записей покупок");
             Connect();
             List<DocumentBuy> DList = new List<DocumentBuy>();
             try
@@ -58,30 +60,33 @@ namespace DocumentsCirculation.DAO
             {
                 SqlCommand addparent = new SqlCommand("insert into Document (name, creationdate, authorID, status, comment, shelflife, signerID, type) "
                     + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type)", Connection);
-                SqlCommand addheir = new SqlCommand("insert into DocumentSale (productname, productammount_killo, productprice, sellerID, documentID)"
+                SqlCommand addheir = new SqlCommand("insert into DocumentBuy (productname, productammount_killo, productprice, sellerID, documentID)"
                     + "values (@productname, @productammount_killo, @productprice, @sellerID, @documentID)", Connection);
 
                 addparent.Parameters.Add(new SqlParameter("@name", buy.name));
                 addparent.Parameters.Add(new SqlParameter("@creationdate", buy.creationdate));
                 addparent.Parameters.Add(new SqlParameter("@authorID", buy.authorID));
                 addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
-                addparent.Parameters.Add(new SqlParameter("@comment", buy.comment));
+                addparent.Parameters.Add(new SqlParameter("@comment", ""));
                 addparent.Parameters.Add(new SqlParameter("@shelflife", buy.shelflife));
                 addparent.Parameters.Add(new SqlParameter("@signerID", buy.signerID));
-                addparent.Parameters.Add(new SqlParameter("@type", buy.type));
+                addparent.Parameters.Add(new SqlParameter("@type", "Покупки"));
 
+                addparent.ExecuteNonQuery();
+                addparent.CommandText = "Select @@Identity";
                 int id = Convert.ToInt32(addparent.ExecuteScalar());
 
                 addheir.Parameters.Add(new SqlParameter("@productname", buy.productname));
-                addheir.Parameters.Add(new SqlParameter("@productammount_number", buy.productammount_killo));
+                addheir.Parameters.Add(new SqlParameter("@productammount_killo", buy.productammount_killo));
                 addheir.Parameters.Add(new SqlParameter("@productprice", buy.productprice_for_killo));
-                addheir.Parameters.Add(new SqlParameter("@buyerID", buy.sellerID));
+                addheir.Parameters.Add(new SqlParameter("@sellerID", buy.sellerID));
                 addheir.Parameters.Add(new SqlParameter("@documentID", id));
 
                 addheir.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }
@@ -118,7 +123,7 @@ namespace DocumentsCirculation.DAO
 
             try
             {
-                string forheir = string.Format("update DocumentSale set productname=@productname, productammount_killo=@productammount_killo, " +
+                string forheir = string.Format("update DocumentBuy set productname=@productname, productammount_killo=@productammount_killo, " +
                     "productprice=@productprice, sellerID=@sellerID where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
                     " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type where documentID='{0}'", id);
@@ -128,7 +133,7 @@ namespace DocumentsCirculation.DAO
                 changeheir.Parameters.AddWithValue("@productname", buy.productname);
                 changeheir.Parameters.AddWithValue("@productammount_killo", buy.productammount_killo);
                 changeheir.Parameters.AddWithValue("@productprice", buy.productprice_for_killo);
-                changeheir.Parameters.AddWithValue("@buyerID", buy.sellerID);
+                changeheir.Parameters.AddWithValue("@sellerID", buy.sellerID);
 
                 changeparent.Parameters.AddWithValue("@name", buy.name);
                 changeparent.Parameters.AddWithValue("@creationdate", buy.creationdate);

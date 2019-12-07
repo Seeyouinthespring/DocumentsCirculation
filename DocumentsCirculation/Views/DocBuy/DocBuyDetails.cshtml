@@ -1,25 +1,17 @@
-﻿@model DocumentsCirculation.Models.DocumentSale
+﻿@model DocumentsCirculation.Models.DocumentBuy
 
 @{
-    ViewBag.Title = "DocSaleDetails";
+    ViewBag.Title = "DocBuyDetails";
 }
 
-<h2>Просмотр документа продажи</h2>
+<h2>Просмотр документа</h2>
 
 <div>
-    <h4>Документ продажи</h4>
+    <h4>Документ покупки</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Номер документа
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.documentID)
-        </dd>
-
-        <dt>
-            Название
+            @Html.DisplayNameFor(model => model.name)
         </dt>
 
         <dd>
@@ -27,7 +19,7 @@
         </dd>
 
         <dt>
-            Дата создания
+            @Html.DisplayNameFor(model => model.creationdate)
         </dt>
 
         <dd>
@@ -35,7 +27,7 @@
         </dd>
 
         <dt>
-            ID автора
+            @Html.DisplayNameFor(model => model.authorID)
         </dt>
 
         <dd>
@@ -43,7 +35,7 @@
         </dd>
 
         <dt>
-            Статус
+            @Html.DisplayNameFor(model => model.status)
         </dt>
 
         <dd>
@@ -51,7 +43,7 @@
         </dd>
 
         <dt>
-            Комментарий
+            @Html.DisplayNameFor(model => model.comment)
         </dt>
 
         <dd>
@@ -59,7 +51,7 @@
         </dd>
 
         <dt>
-            Хранить до
+            @Html.DisplayNameFor(model => model.shelflife)
         </dt>
 
         <dd>
@@ -67,7 +59,7 @@
         </dd>
 
         <dt>
-            ID подписывающего
+            @Html.DisplayNameFor(model => model.signerID)
         </dt>
 
         <dd>
@@ -75,7 +67,7 @@
         </dd>
 
         <dt>
-            Тип
+            @Html.DisplayNameFor(model => model.type)
         </dt>
 
         <dd>
@@ -83,7 +75,7 @@
         </dd>
 
         <dt>
-            Название продукции
+            @Html.DisplayNameFor(model => model.productname)
         </dt>
 
         <dd>
@@ -91,32 +83,32 @@
         </dd>
 
         <dt>
-            Количество штук
+            @Html.DisplayNameFor(model => model.productammount_killo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.productammount_num)
+            @Html.DisplayFor(model => model.productammount_killo)
         </dd>
 
         <dt>
-            Цена за одну штуку)
+            @Html.DisplayNameFor(model => model.productprice_for_killo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.productprice_for_one)
+            @Html.DisplayFor(model => model.productprice_for_killo)
         </dd>
 
         <dt>
-            ID покупателя
+            @Html.DisplayNameFor(model => model.sellerID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.buyerID)
+            @Html.DisplayFor(model => model.sellerID)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Редактировать", "DocSaleEdit", new { id = Model.documentID }) |
-    @Html.ActionLink("Назад", "DocSaleIndex")
+    @Html.ActionLink("Редактировать", "DocBuyEdit", new { id = Model.documentID }) |
+    @Html.ActionLink("Назад", "DocBuyIndex")
 </p>

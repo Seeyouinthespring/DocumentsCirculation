@@ -64,11 +64,13 @@ namespace DocumentsCirculation.DAO
                 addparent.Parameters.Add(new SqlParameter("@creationdate", report.creationdate));
                 addparent.Parameters.Add(new SqlParameter("@authorID", report.authorID));
                 addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
-                addparent.Parameters.Add(new SqlParameter("@comment", report.comment));
+                addparent.Parameters.Add(new SqlParameter("@comment", ""));
                 addparent.Parameters.Add(new SqlParameter("@shelflife", report.shelflife));
                 addparent.Parameters.Add(new SqlParameter("@signerID", report.signerID));
-                addparent.Parameters.Add(new SqlParameter("@type", report.type));
+                addparent.Parameters.Add(new SqlParameter("@type", "Отчет"));
 
+                addparent.ExecuteNonQuery();
+                addparent.CommandText = "Select @@Identity";
                 int id = Convert.ToInt32(addparent.ExecuteScalar());
 
                 addheir.Parameters.Add(new SqlParameter("@startdate", report.startdate));
@@ -116,7 +118,7 @@ namespace DocumentsCirculation.DAO
 
             try
             {
-                string forheir = string.Format("update DocumentSale set startdate=@startdate, enddate=@enddate, stats=@stats where documentID='{0}'", id);
+                string forheir = string.Format("update DocumentReport set startdate=@startdate, enddate=@enddate, stats=@stats where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
                     " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type where documentID='{0}'", id);
                 SqlCommand changeheir = new SqlCommand(forheir, Connection);

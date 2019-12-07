@@ -7,7 +7,7 @@ namespace DocumentsCirculation.Models
 {
     public class DocumentBuy: Document
     {
-        public int documrntbuyID { get; set; }
+        public int documentbuyID { get; set; }
         public string productname { get; set; }
         public decimal productammount_killo { get; set; }
         public decimal productprice_for_killo { get; set; }

@@ -1,0 +1,98 @@
+﻿@model DocumentsCirculation.Models.DocumentInside
+
+@{
+    ViewBag.Title = "DocInsideDetails";
+}
+
+<h2>Просмотр внутреннего документа</h2>
+
+<div>
+    <h4>Внутренний документ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creationdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creationdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.authorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.authorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shelflife)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shelflife)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.signerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.signerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.moneydifference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.moneydifference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "DocInsideEdit", new { id = Model.documentID })
+    @Html.ActionLink("Назад", "DocInsideIndex")
+</p>

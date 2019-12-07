@@ -177,6 +177,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DocBuyController.cs" />
+    <Compile Include="Controllers\DocInsideController.cs" />
+    <Compile Include="Controllers\DocReportController.cs" />
     <Compile Include="Controllers\DocSaleController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAO\AdministrationDAO.cs" />
@@ -264,6 +267,21 @@
     <Content Include="Views\DocSale\DocSaleCreate.cshtml" />
     <Content Include="Views\DocSale\DocSaleEdit.cshtml" />
     <Content Include="Views\DocSale\DocSaleDelete.cshtml" />
+    <Content Include="Views\DocBuy\DocBuyIndex.cshtml" />
+    <Content Include="Views\DocBuy\DocBuyDetails.cshtml" />
+    <Content Include="Views\DocBuy\DocBuyCreate.cshtml" />
+    <Content Include="Views\DocBuy\DocBuyEdit.cshtml" />
+    <Content Include="Views\DocBuy\DocBuyDelete.cshtml" />
+    <Content Include="Views\DocReport\DocReportIndex.cshtml" />
+    <Content Include="Views\DocReport\DocReportDetails.cshtml" />
+    <Content Include="Views\DocReport\DocReportCreate.cshtml" />
+    <Content Include="Views\DocReport\DocReportEdit.cshtml" />
+    <Content Include="Views\DocReport\DocReportDelete.cshtml" />
+    <Content Include="Views\DocInside\DocInsideIndex.cshtml" />
+    <Content Include="Views\DocInside\DocInsideDetails.cshtml" />
+    <Content Include="Views\DocInside\DocInsideCreate.cshtml" />
+    <Content Include="Views\DocInside\DocInsideEdit.cshtml" />
+    <Content Include="Views\DocInside\DocInsideDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

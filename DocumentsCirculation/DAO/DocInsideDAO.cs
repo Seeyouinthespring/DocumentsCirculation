@@ -9,6 +9,8 @@ namespace DocumentsCirculation.DAO
     {
         public List<DocumentInside> GetAllInsides()
         {
+            Logger.InitLogger();
+            Logger.Log.Info("Метод вызова всех записей");
             Connect();
             List<DocumentInside> DList = new List<DocumentInside>();
             try
@@ -57,18 +59,20 @@ namespace DocumentsCirculation.DAO
             {
                 SqlCommand addparent = new SqlCommand("insert into Document (name, creationdate, authorID, status, comment, shelflife, signerID, type) "
                     + "VALUES (@name, @creationdate, @authorID, @status, @comment, @shelflife, @signerID, @type)", Connection);
-                SqlCommand addheir = new SqlCommand("insert into DocumentSale (moneydifference, targetID, documentID)"
+                SqlCommand addheir = new SqlCommand("insert into DocumentInside (moneydifference, targetID, documentID)"
                     + "values (@moneydifference, @targetID, @documentID)", Connection);
 
                 addparent.Parameters.Add(new SqlParameter("@name", inside.name));
                 addparent.Parameters.Add(new SqlParameter("@creationdate", inside.creationdate));
                 addparent.Parameters.Add(new SqlParameter("@authorID", inside.authorID));
                 addparent.Parameters.Add(new SqlParameter("@status", "Создан"));
-                addparent.Parameters.Add(new SqlParameter("@comment", inside.comment));
+                addparent.Parameters.Add(new SqlParameter("@comment", ""));
                 addparent.Parameters.Add(new SqlParameter("@shelflife", inside.shelflife));
                 addparent.Parameters.Add(new SqlParameter("@signerID", inside.signerID));
-                addparent.Parameters.Add(new SqlParameter("@type", inside.type));
+                addparent.Parameters.Add(new SqlParameter("@type", "Внутренний"));
 
+                addparent.ExecuteNonQuery();
+                addparent.CommandText = "Select @@Identity";
                 int id = Convert.ToInt32(addparent.ExecuteScalar());
 
                 addheir.Parameters.Add(new SqlParameter("@moneydifference", inside.moneydifference));
@@ -77,8 +81,9 @@ namespace DocumentsCirculation.DAO
 
                 addheir.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }
@@ -115,15 +120,15 @@ namespace DocumentsCirculation.DAO
 
             try
             {
-                string forheir = string.Format("update DocumentInside set moneydifference=@moneydifference, targetID=@targetID, " +
+                string forheir = string.Format("update DocumentInside set moneydifference=@moneydifference, targetID=@targetID " +
                     "where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
                     " status=@status, shelflife=@shelflife, signerID=@signerID where documentID='{0}'", id);
                 SqlCommand changeheir = new SqlCommand(forheir, Connection);
                 SqlCommand changeparent = new SqlCommand(forparent, Connection);
 
-                changeheir.Parameters.AddWithValue("@productname", inside.moneydifference);
-                changeheir.Parameters.AddWithValue("@productammount_killo", inside.targetID);
+                changeheir.Parameters.AddWithValue("@moneydifference", inside.moneydifference);
+                changeheir.Parameters.AddWithValue("@targetID", inside.targetID);
 
                 changeparent.Parameters.AddWithValue("@name", inside.name);
                 changeparent.Parameters.AddWithValue("@creationdate", inside.creationdate);
@@ -136,8 +141,9 @@ namespace DocumentsCirculation.DAO
                 changeheir.ExecuteNonQuery();
                 changeparent.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }
