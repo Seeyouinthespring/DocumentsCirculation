@@ -1,0 +1,105 @@
+﻿@model IEnumerable<DocumentsCirculation.Models.Document>
+
+@{
+    ViewBag.Title = "AllIndex";
+}
+
+<h2>AllIndex</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creationdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.authorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shelflife)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.signerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.creationdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.authorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shelflife)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.signerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @switch (item.type)
+            {
+                case "Продажи":
+                    @Html.RouteLink("Просмотреть", new { controller = "DocSale", action = "DocSaleDetails", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                case "Покупки":
+                    @Html.RouteLink("Просмотреть", new { controller = "DocBuy", action = "DocBuyDetails", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                case "Отчет":
+                    @Html.RouteLink("Просмотреть", new { controller = "DocReport", action = "DocReportDetails", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                case "Внутренний":
+                    @Html.RouteLink("Просмотреть", new { controller = "DocInside", action = "DocInsideDetails", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                default:
+                    <p>Не верный тип</p>
+                    break;
+            }
+            @switch (item.type)
+            {
+                case "Продажи":
+                    @Html.RouteLink("Удалить", new { controller = "DocSale", action = "DocSaleDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                case "Покупки":
+                    @Html.RouteLink("Удалить", new { controller = "DocBuy", action = "DocBuyDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                case "Отчет":
+                    @Html.RouteLink("Удалить", new { controller = "DocReport", action = "DocReportDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                case "Внутренний":
+                    @Html.RouteLink("Удалить", new { controller = "DocInside", action = "DocInsideDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
+                    break;
+                default:
+                    <p>Не верный тип</p>
+                    break;
+            }
+        </td>
+    </tr>
+}
+
+</table>

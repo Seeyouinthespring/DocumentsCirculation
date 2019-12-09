@@ -177,6 +177,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\DocBuyController.cs" />
     <Compile Include="Controllers\DocInsideController.cs" />
     <Compile Include="Controllers\DocReportController.cs" />
@@ -282,6 +283,7 @@
     <Content Include="Views\DocInside\DocInsideCreate.cshtml" />
     <Content Include="Views\DocInside\DocInsideEdit.cshtml" />
     <Content Include="Views\DocInside\DocInsideDelete.cshtml" />
+    <Content Include="Views\Administration\AllIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -128,7 +128,7 @@ namespace DocumentsCirculation.DAO
                 string forheir = string.Format("update DocumentSale set productname=@productname, productammount_number=@productammount_number, " +
                     "productprice=@productprice, buyerID=@buyerID where documentID='{0}'", id);
                 string forparent = string.Format("update Document set name=@name, creationdate=@creationdate, authorID=@authorID," +
-                    " status=@status, shelflife=@shelflife, signerID=@signerID, type=@type where documentID='{0}'", id);
+                    " status=@status, comment=@comment, shelflife=@shelflife, signerID=@signerID, type=@type where documentID='{0}'", id);
                 SqlCommand changeheir = new SqlCommand(forheir, Connection);
                 SqlCommand changeparent = new SqlCommand(forparent, Connection);
 
@@ -141,6 +141,7 @@ namespace DocumentsCirculation.DAO
                 changeparent.Parameters.AddWithValue("@creationdate", sale.creationdate);
                 changeparent.Parameters.AddWithValue("@authorID", sale.authorID);
                 changeparent.Parameters.AddWithValue("@status", "Создан");
+                changeparent.Parameters.AddWithValue("@comment", sale.comment);
                 changeparent.Parameters.AddWithValue("@shelflife", sale.shelflife);
                 changeparent.Parameters.AddWithValue("@signerID", sale.signerID);
                 changeparent.Parameters.AddWithValue("@type", sale.type);

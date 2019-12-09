@@ -1,57 +1,155 @@
-2019-12-07 17:10:42,898  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:11:12,987  ERROR DocumentsCirculation.DAO.DocBuyDAO AddBuy ERROR: Необходимо объявить скалярную переменную "@sellerID".
-2019-12-07 17:13:10,314  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:13:48,130  ERROR DocumentsCirculation.DAO.DocBuyDAO AddBuy ERROR: Недопустимое имя столбца "productammount_killo".
-Недопустимое имя столбца "sellerID".
-2019-12-07 17:21:37,855  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:22:07,841  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:22:28,642  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:23:36,945  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:23:41,606  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:23:45,567  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:23:47,129  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:24:41,895  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:24:50,282  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:24:52,012  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Метод удаления записи
-2019-12-07 17:24:52,032  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type:Покупки
-2019-12-07 17:24:52,033  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type после закрытия reader:Покупки
-2019-12-07 17:24:52,075  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:55:55,317  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:57:22,546  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:57:54,699  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:58:38,593  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:58:51,577  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:59:38,318  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:59:47,243  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 17:59:51,180  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-07 19:19:15,209  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:20:59,856  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:21:13,580  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:21:15,848  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:21:17,252  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:22:08,341  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:23:34,326  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:23:50,988  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:24:09,218  ERROR DocumentsCirculation.DAO.DocInsideDAO ChangeInside ERROR: Необходимо объявить скалярную переменную "@moneydifference".
-2019-12-07 19:32:20,071  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:32:27,632  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:33:05,111  ERROR DocumentsCirculation.DAO.DocInsideDAO ChangeInside ERROR: Неправильный синтаксис около ключевого слова "where".
-2019-12-07 19:36:46,888  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:36:52,919  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:37:11,308  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-07 19:55:43,037  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 19:57:34,093  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:00:57,762  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:02:29,754  INFO  DocumentsCirculation.DAO.DocSaleDAO AddSale Значение переменной id:17
-2019-12-07 20:02:29,798  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:06:30,377  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:06:36,614  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:06:51,044  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:09:58,508  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:10:15,798  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:10:19,945  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:10:21,141  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:10:30,627  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:22:25,085  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:23:24,780  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-07 20:23:28,838  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:01:12,732  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:01:13,672  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:01:13,704  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:02:57,666  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:02:57,782  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:02:57,798  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:03:00,505  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:03:00,605  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:03:00,621  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:03:02,912  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:03:02,981  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:03:02,981  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:03:05,233  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:03:05,318  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:03:05,318  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:13:01,523  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:13:01,744  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:13:01,760  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:13:10,161  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:13:10,232  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:13:10,246  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:14:49,652  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:14:49,959  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:14:49,990  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:14:56,731  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:14:56,824  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:14:56,831  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:15:10,015  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:15:10,099  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:15:10,115  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:15:11,271  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:15:11,340  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:15:11,356  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:15:12,822  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:15:12,894  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:15:12,910  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:15:13,940  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:15:14,009  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:15:14,040  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:15:18,309  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:15:18,410  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:15:18,425  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:15:19,660  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:15:19,729  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:15:19,744  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:19:33,838  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:19:34,030  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:19:34,070  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:38:22,910  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:38:23,072  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:38:23,124  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:38:39,298  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:38:39,395  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:38:39,410  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:38:49,939  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:38:50,010  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:38:50,024  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:38:51,000  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:38:51,066  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:38:51,079  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:38:53,193  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:38:53,382  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:38:53,396  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:40:47,424  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:40:47,585  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:40:47,621  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:40:54,958  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:40:55,169  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:40:55,191  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:41:29,077  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:41:29,349  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:41:29,365  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:41:34,158  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:41:34,393  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:41:34,415  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:41:41,600  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:41:41,706  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:41:41,729  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:42:56,106  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:42:56,249  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:42:56,275  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:43:15,699  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:43:15,893  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:43:15,907  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:53:43,592  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:53:43,771  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:53:43,786  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:55:04,394  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:55:04,594  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:55:04,611  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:55:10,330  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:55:10,409  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:55:10,423  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:55:55,652  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:55:55,906  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:55:55,922  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:56:07,880  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:58:21,162  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:58:21,446  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:58:21,464  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:59:29,372  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:59:29,448  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:59:29,461  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:59:31,182  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:59:36,865  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:59:36,930  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:59:36,943  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:59:38,768  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:59:42,823  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:59:42,912  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:59:42,927  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 00:59:44,339  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:59:47,176  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 00:59:47,253  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 00:59:47,267  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:05:24,489  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:05:24,653  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:05:24,675  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:05:38,401  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:05:41,023  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:05:41,145  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:05:41,167  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:05:42,536  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:05:51,723  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:09:33,190  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:09:33,458  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:09:33,474  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:09:39,416  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:09:44,630  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:09:44,734  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:09:44,774  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:09:55,204  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:09:59,266  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:21,383  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:21,632  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:21,658  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:12:26,617  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:30,117  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:30,193  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:30,205  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:12:33,281  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:35,484  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:35,547  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:35,560  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:12:40,288  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:40,355  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:40,369  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:12:42,961  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:12:44,747  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:44,804  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:44,817  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-10 01:12:50,301  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:55,053  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-10 01:12:55,138  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-10 01:12:55,150  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей

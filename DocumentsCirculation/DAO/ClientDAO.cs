@@ -46,7 +46,7 @@ namespace DocumentsCirculation.DAO
             try
             {
                 SqlCommand addclient = new SqlCommand("insert into Client (officialname, email) "
-                    + "VALUES (@)officialname, @email", Connection);
+                    + "VALUES (@officialname, @email)", Connection);
 
                 addclient.Parameters.Add(new SqlParameter("@name", client.officialname));
                 addclient.Parameters.Add(new SqlParameter("@creationdate", client.email));
