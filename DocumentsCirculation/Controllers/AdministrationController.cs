@@ -10,6 +10,7 @@ namespace DocumentsCirculation.Controllers
 {
     public class AdministrationController : Controller
     {
+        static Document doc = new Document();
         static DocBuyDAO docbuy = new DocBuyDAO();
         static DocSaleDAO docsale = new DocSaleDAO();
         static DocReportDAO docreport = new DocReportDAO();
@@ -23,31 +24,7 @@ namespace DocumentsCirculation.Controllers
         //GET
         public ActionResult SendForSign(int id)
         {
-            int pos = 0;
-            for (int i = 0; i < dbList.Count; i++)
-                if (id == dbList[i].documentID)
-                {
-                    pos = i;
-                    return View(dbList[pos]);
-                }
-            for (int i = 0; i < dsList.Count; i++)
-                if (id == dsList[i].documentID)
-                {
-                    pos = i;
-                    return View(dsList[pos]);
-                }
-            for (int i = 0; i < drList.Count; i++)
-                if (id == drList[i].documentID)
-                {
-                    pos = i;
-                    return View(drList[pos]);
-                }
-            for (int i = 0; i < diList.Count; i++)
-                if (id == diList[i].documentID)
-                {
-                    pos = i;
-                    return View(diList[pos]);
-                }
+            
             return View();
         }
 
@@ -59,42 +36,17 @@ namespace DocumentsCirculation.Controllers
             {
                 if (admin.SendForSign(id))
                     return RedirectToAction("AllIndex");
-                else return View("SendForSign");
+                else return View("Mistake");
             }
             catch
             {
-                return View("SendForSign");
+                return View("Mistake");
             }
         }
 
         //GET
         public ActionResult Sign(int id)
         {
-            int pos = 0;
-            for (int i = 0; i < dbList.Count; i++)
-                if (id == dbList[i].documentID)
-                {
-                    pos = i;
-                    return View(dbList[pos]);
-                }
-            for (int i = 0; i < dsList.Count; i++)
-                if (id == dsList[i].documentID)
-                {
-                    pos = i;
-                    return View(dsList[pos]);
-                }
-            for (int i = 0; i < drList.Count; i++)
-                if (id == drList[i].documentID)
-                {
-                    pos = i;
-                    return View(drList[pos]);
-                }
-            for (int i = 0; i < diList.Count; i++)
-                if (id == diList[i].documentID)
-                {
-                    pos = i;
-                    return View(diList[pos]);
-                }
             return View();
         }
 
@@ -105,58 +57,31 @@ namespace DocumentsCirculation.Controllers
             try
             {
                 if (admin.Sign(id))
-                    return RedirectToAction("AllIndex");
-                else return View("Sign");
+                    return RedirectToAction("SignSuccess");
+                else return View("Mistake");
             }
             catch
             {
-                return View("Sign");
+                return View("Mistake");
             }
         }
 
         //POST
         [HttpPost]
-        public ActionResult SendForChange(int id, string comment)
+        public ActionResult SendForChange(int id)
         {
             try
             {
-                if (admin.SendForChange(id,comment))
-                    return RedirectToAction("AllIndex");
-                else return View("SSendForChange");
+                return RedirectToAction("WriteComment");
             }
             catch
             {
-                return View("SendForChange");
+                return View("Mistake");
             }
         }
 
         public ActionResult SendForDrop(int id)
         {
-            int pos = 0;
-            for (int i = 0; i < dbList.Count; i++)
-                if (id == dbList[i].documentID)
-                {
-                    pos = i;
-                    return View(dbList[pos]);
-                }
-            for (int i = 0; i < dsList.Count; i++)
-                if (id == dsList[i].documentID)
-                {
-                    pos = i;
-                    return View(dsList[pos]);
-                }
-            for (int i = 0; i < drList.Count; i++)
-                if (id == drList[i].documentID)
-                {
-                    pos = i;
-                    return View(drList[pos]);
-                }
-            for (int i = 0; i < diList.Count; i++)
-                if (id == diList[i].documentID)
-                {
-                    pos = i;
-                    return View(diList[pos]);
-                }
             return View();
         }
 
@@ -168,11 +93,11 @@ namespace DocumentsCirculation.Controllers
             {
                 if (admin.SendForDrop(id))
                     return RedirectToAction("AllIndex");
-                else return View("SendForDrop");
+                else return View("Mistake");
             }
             catch
             {
-                return View("SendForDrop");
+                return View("Mistake");
             }
         }
 
@@ -181,6 +106,35 @@ namespace DocumentsCirculation.Controllers
         public ActionResult AllIndex()
         {
             return View(admin.GetAll());
+        }
+
+        //Get 
+        public ActionResult WriteComment(int id)
+        {
+            List<Document> dList = admin.GetAll();
+            int pos = 0;
+            for (int i = 0; i < dList.Count; i++)
+                if (id == dList[i].documentID)
+                {
+                    pos = i;
+                }
+            return View(dList[pos]);
+        }
+
+        //Post
+        [HttpPost]
+        public ActionResult WriteComment(int id, Document d)
+        {
+            try
+            {
+                if (admin.SendForChange(id,d))
+                    return RedirectToAction("AllIndex");
+                else return View("Mistake");
+            }
+            catch
+            {
+                return View("Mistake");
+            }
         }
     }
 }

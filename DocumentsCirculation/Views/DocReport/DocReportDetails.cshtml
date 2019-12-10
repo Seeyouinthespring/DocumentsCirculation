@@ -103,5 +103,6 @@
 <p>
     @Html.ActionLink("Редактировать", "DocReportEdit", new { id = Model.documentID }) |
     @Html.ActionLink("Назад", "DocReportIndex")|
-    @Html.ActionLink("К списку всех документов", "AllIndex", "Administration")
+    @Html.ActionLink("К списку всех документов", "AllIndex", "Administration")|
+    @Html.RouteLink("Отправить на редактирование", new { controller = "Administration", action = "WriteComment", id = Model.documentID }, new { id = Model.documentID, @class = "link" })
 </p>

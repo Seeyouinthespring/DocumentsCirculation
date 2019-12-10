@@ -178,6 +178,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\DocBuyController.cs" />
     <Compile Include="Controllers\DocInsideController.cs" />
     <Compile Include="Controllers\DocReportController.cs" />
@@ -284,6 +285,12 @@
     <Content Include="Views\DocInside\DocInsideEdit.cshtml" />
     <Content Include="Views\DocInside\DocInsideDelete.cshtml" />
     <Content Include="Views\Administration\AllIndex.cshtml" />
+    <Content Include="Views\Administration\WriteComment.cshtml" />
+    <Content Include="Views\Client\ClientIndex.cshtml" />
+    <Content Include="Views\Client\ClientDetails.cshtml" />
+    <Content Include="Views\Client\ClientCreate.cshtml" />
+    <Content Include="Views\Client\ClientEdit.cshtml" />
+    <Content Include="Views\Client\ClientDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

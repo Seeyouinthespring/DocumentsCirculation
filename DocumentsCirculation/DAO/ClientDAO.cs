@@ -9,6 +9,8 @@ namespace DocumentsCirculation.DAO
     {
         public List<Client> GetAllClients()
         {
+            Logger.InitLogger();
+            Logger.Log.Info("Метод вызова всех клиентов");
             Connect();
             List<Client> CList = new List<Client>();
             try
@@ -48,13 +50,14 @@ namespace DocumentsCirculation.DAO
                 SqlCommand addclient = new SqlCommand("insert into Client (officialname, email) "
                     + "VALUES (@officialname, @email)", Connection);
 
-                addclient.Parameters.Add(new SqlParameter("@name", client.officialname));
-                addclient.Parameters.Add(new SqlParameter("@creationdate", client.email));
+                addclient.Parameters.Add(new SqlParameter("@officialname", client.officialname));
+                addclient.Parameters.Add(new SqlParameter("@email", client.email));
 
                 addclient.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }
@@ -68,13 +71,14 @@ namespace DocumentsCirculation.DAO
 
             try
             {
-                string dropstring = string.Format("Delete from Client where documentID='{0}'", id);
+                string dropstring = string.Format("Delete from Client where clientID='{0}'", id);
                 SqlCommand dropclient = new SqlCommand(dropstring, Connection);
 
                 dropclient.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logger.Log.Error("ERROR: " + e.Message);
                 result = false;
             }
             finally { Disconnect(); }

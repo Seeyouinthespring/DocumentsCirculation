@@ -12,6 +12,7 @@ namespace DocumentsCirculation.Models
         public DateTime birthdate { get; set; }
         public DateTime employdate { get; set; }
         public decimal salary { get; set; }
+        public string role { get; set; }
 
         List<Worker> WorkerList { get; set; }
     }

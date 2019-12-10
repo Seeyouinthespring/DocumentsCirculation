@@ -115,7 +115,7 @@ namespace DocumentsCirculation.DAO
             return result;
         }
 
-        public bool SendForChange(int id, string com)
+        public bool SendForChange(int id,Document doc)
         {
             bool result = true;
             Connect();
@@ -125,7 +125,7 @@ namespace DocumentsCirculation.DAO
                 string forchange = string.Format("Update Document set status=@status, comment=@comment where documentID='{0}'", id);
 
                 SqlCommand sendforchange = new SqlCommand(forchange, Connection);
-                sendforchange.Parameters.AddWithValue("@comment", com);
+                sendforchange.Parameters.AddWithValue("@comment", doc.comment);
                 sendforchange.Parameters.AddWithValue("@status", "Подлежит редактированию");
                 sendforchange.ExecuteNonQuery();
             }

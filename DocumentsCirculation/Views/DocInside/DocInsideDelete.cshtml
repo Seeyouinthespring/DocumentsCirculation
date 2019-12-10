@@ -93,12 +93,14 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> 
-            @Html.ActionLink("Назад", "DocInsideIndex")
+            <input type="submit" value="Удалить" class="btn btn-default" />
+            @Html.ActionLink("К списку внутренних документов", "DocInsideIndex")
         </div>
     }
+    @Html.ActionLink("К списку всех документов", "AllIndex", "Administration")
 </div>

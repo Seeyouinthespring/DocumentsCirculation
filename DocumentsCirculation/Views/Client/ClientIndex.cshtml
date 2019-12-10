@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DocumentsCirculation.Models.Client>
+
+@{
+    ViewBag.Title = "ClientIndex";
+}
+
+<h2>Список клиентов</h2>
+
+<p>
+    @Html.ActionLink("Добавть клиента", "ClientCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.officialname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.officialname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "ClientEdit", new { id=item.clientID }) |
+            @Html.ActionLink("Просмотреть", "ClientDetails", new { id=item.clientID }) |
+            @Html.ActionLink("Удалить", "ClientDelete", new { id=item.clientID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,40 @@
+﻿@model DocumentsCirculation.Models.Client
+
+@{
+    ViewBag.Title = "ClientDelete";
+}
+
+<h2>Удаление информации о клиенте</h2>
+
+<h3>Вы уверены, что хотите удалить информацию об этом клиенте?</h3>
+<div>
+    <h4>Клиент</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.officialname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.officialname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("К списку всех клиентов", "ClientIndex")
+        </div>
+    }
+</div>
