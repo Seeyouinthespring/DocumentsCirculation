@@ -184,6 +184,7 @@
     <Compile Include="Controllers\DocReportController.cs" />
     <Compile Include="Controllers\DocSaleController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\WorkerController.cs" />
     <Compile Include="DAO\AdministrationDAO.cs" />
     <Compile Include="DAO\ClientDAO.cs" />
     <Compile Include="DAO\DAO.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="DAO\DocReportDAO.cs" />
     <Compile Include="DAO\DocSaleDAO.cs" />
     <Compile Include="DAO\Logger.cs" />
+    <Compile Include="DAO\WorkerDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -291,6 +293,10 @@
     <Content Include="Views\Client\ClientCreate.cshtml" />
     <Content Include="Views\Client\ClientEdit.cshtml" />
     <Content Include="Views\Client\ClientDelete.cshtml" />
+    <Content Include="Views\Worker\WorkerIndex.cshtml" />
+    <Content Include="Views\Worker\WorkerDetails.cshtml" />
+    <Content Include="Views\Worker\WorkerCreate.cshtml" />
+    <Content Include="Views\Worker\WorkerEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

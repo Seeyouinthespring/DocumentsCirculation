@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DocumentsCirculation.Models.Worker>
+
+@{
+    ViewBag.Title = "WorkerIndex";
+}
+
+<h2>Список рабочих</h2>
+
+<p>
+    @Html.ActionLink("Добавить рабочего", "WorkerCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ФИО
+        </th>
+        <th>
+            Дата рождения
+        </th>
+        <th>
+            Дата приема
+        </th>
+        <th>
+            Зарплата (руб)
+        </th>
+        <th>
+            Должность
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birthdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.role)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "WorkerEdit", new { id = item.workerID }) |
+            @Html.ActionLink("Просмотреть", "WorkerDetails", new { id = item.workerID }) |
+            <!--@Html.ActionLink("Удалить", "WorkerDelete", new { id = item.workerID })-->
+        </td>
+    </tr>
+}
+
+</table>

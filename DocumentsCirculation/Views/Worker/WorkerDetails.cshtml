@@ -1,0 +1,58 @@
+﻿@model DocumentsCirculation.Models.Worker
+
+@{
+    ViewBag.Title = "WorkerDetails";
+}
+
+<h2>Просмотр информации о работник</h2>
+
+<div>
+    <h4>Работник</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ФИО
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fio)
+        </dd>
+
+        <dt>
+            Дата рождения
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthdate)
+        </dd>
+
+        <dt>
+            Дата приема
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employdate)
+        </dd>
+
+        <dt>
+            Зарплата(руб)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+
+        <dt>
+            Должность
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.role)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "WorkerEdit", new { id = Model.workerID }) |
+    @Html.ActionLink("К списку рабочих", "WorkerIndex")
+</p>
