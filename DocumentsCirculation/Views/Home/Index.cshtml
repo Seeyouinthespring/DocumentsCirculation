@@ -1,8 +1,43 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div>
+    <h2>Меню</h2>
 
-<div class="jumbotron">
+    <table class="table">
+        <tr>
+            <td>Работа с конкретным<br> типом документов</td>
+            <td>@Html.RouteLink("Все документы", new { controller = "Administration", action = "AllIndex" }, new { @class = "link" })</td>
+            <td>@Html.RouteLink("Все работники", new { controller = "Worker", action = "WorkerIndex" }, new { @class = "link" })</td>
+            <td>@Html.RouteLink("Все клиенты", new { controller = "Client", action = "ClientIndex" }, new { @class = "link" })</td>
+        </tr>
+        <tr>
+            <td>@Html.RouteLink("Документы покупки", new { controller = "DocBuy", action = "DocBuyIndex" }, new { @class = "link" })</td>
+            <td>TBD</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>@Html.RouteLink("Документы продажи", new { controller = "DocSale", action = "DocSaleIndex" }, new { @class = "link" })</td>
+            <td>TBD</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>@Html.RouteLink("Документы отчета", new { controller = "DocReport", action = "DocReportIndex" }, new { @class = "link" })</td>
+            <td>TBD</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>@Html.RouteLink("Внутренние документы", new { controller = "DocInside", action = "DocInsideIndex" }, new { @class = "link" })</td>
+            <td>TBD</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+@*<div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
@@ -28,4 +63,4 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
-</div>
+</div>*@

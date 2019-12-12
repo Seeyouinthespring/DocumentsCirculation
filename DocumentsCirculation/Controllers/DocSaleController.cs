@@ -12,14 +12,16 @@ namespace DocumentsCirculation.Controllers
     {
         DocSaleDAO docsale = new DocSaleDAO();
         AdministrationDAO admin = new AdministrationDAO();
-        
+
         // GET: DocSale
+        [Authorize(Roles = "SysAdmin, Administrator, Director, SaleWorker")]
         public ActionResult DocSaleIndex()
         {
             return View(docsale.GetAllSales());
         }
 
         // GET: DocSale/Details/5
+        [Authorize(Roles = "SysAdmin, Administrator, Director, SaleWorker")]
         public ActionResult DocSaleDetails(int id)
         {
             List<DocumentSale> dsList = docsale.GetAllSales();
@@ -33,6 +35,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocSale/Create
+        [Authorize(Roles = "SysAdmin, SaleWorker")]
         public ActionResult DocSaleCreate()
         {
             return View();
@@ -55,6 +58,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocSale/Edit/5
+        [Authorize(Roles = "SysAdmin, SaleWorker")]
         public ActionResult DocSaleEdit(int id)
         {
             List<DocumentSale> dsList = docsale.GetAllSales();
@@ -64,7 +68,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(dsList[pos]);
+            if (dsList[pos].status == "Подлежит редактированию" | dsList[pos].status == "Создан")
+            {
+                return View(dsList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocSale/Edit/5
@@ -84,6 +92,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocSale/Delete/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult DocSaleDelete(int id)
         {
             List<DocumentSale> dsList = docsale.GetAllSales();
@@ -93,7 +102,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(dsList[pos]);
+            if (dsList[pos].status == "Отправлен на удаление")
+            {
+                return View(dsList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocSale/Delete/5

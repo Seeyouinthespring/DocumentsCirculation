@@ -12,12 +12,14 @@ namespace DocumentsCirculation.Controllers
     {
         WorkerDAO workerDAO = new WorkerDAO();
         // GET: Worker
+        [Authorize(Roles = "SysAdmin, Administrator, Director")]
         public ActionResult WorkerIndex()
         {
             return View(workerDAO.GetAllWorkers());
         }
 
         // GET: Worker/Details/5
+        [Authorize(Roles = "SysAdmin, Administrator, Director")]
         public ActionResult WorkerDetails(int id)
         {
             List<Worker> workerList = workerDAO.GetAllWorkers();
@@ -31,6 +33,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: Worker/Create
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult WorkerCreate()
         {
             return View();
@@ -53,6 +56,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: Worker/Edit/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult WorkerEdit(int id)
         {
             List<Worker> workerList = workerDAO.GetAllWorkers();
@@ -82,6 +86,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: Worker/Delete/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult WorkerDelete(int id)
         {
             List<Worker> workerList = workerDAO.GetAllWorkers();

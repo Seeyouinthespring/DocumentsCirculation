@@ -13,12 +13,14 @@ namespace DocumentsCirculation.Controllers
         DocInsideDAO docinside = new DocInsideDAO();
         AdministrationDAO admin = new AdministrationDAO();
         // GET: DocInside
+        [Authorize(Roles = "SysAdmin, Administrator, Director, Accountant")]
         public ActionResult DocInsideIndex()
         {
             return View(docinside.GetAllInsides());
         }
 
         // GET: DocInside/Details/5
+        [Authorize(Roles = "SysAdmin, Administrator, Director, Accountant")]
         public ActionResult DocInsideDetails(int id)
         {
             List<DocumentInside> diList = docinside.GetAllInsides();
@@ -32,6 +34,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocInside/Create
+        [Authorize(Roles = "SysAdmin, Accountant")]
         public ActionResult DocInsideCreate()
         {
             return View();
@@ -54,6 +57,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocInside/Edit/5
+        [Authorize(Roles = "SysAdmin, Accountant")]
         public ActionResult DocInsideEdit(int id)
         {
             List<DocumentInside> diList = docinside.GetAllInsides();
@@ -63,7 +67,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(diList[pos]);
+            if (diList[pos].status == "Подлежит редактированию" | diList[pos].status == "Создан")
+            {
+                return View(diList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocInside/Edit/5
@@ -83,6 +91,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocInside/Delete/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult DocInsideDelete(int id)
         {
             List<DocumentInside> diList = docinside.GetAllInsides();
@@ -92,7 +101,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(diList[pos]);
+            if (diList[pos].status == "Отправлен на удаление")
+            {
+                return View(diList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocInside/Delete/5

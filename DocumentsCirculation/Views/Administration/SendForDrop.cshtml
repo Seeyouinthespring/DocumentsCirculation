@@ -1,0 +1,20 @@
+﻿@model DocumentsCirculation.Models.Document
+
+@{
+    ViewBag.Title = "SendForDrop";
+}
+
+<h2>Отправка на удаление</h2>
+
+<h3>Вы уверены что хотите ОТПРАВИТЬ НА УДАЛЕНИЕ документ @Html.DisplayFor(model => model.documentID) "@Html.DisplayFor(model => model.name)" ?</h3>
+<div>
+    <hr />
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Отправить" class="btn btn-default" /> |
+            @Html.ActionLink("К списку всех документов", "AllIndex")
+        </div>
+    }
+</div>

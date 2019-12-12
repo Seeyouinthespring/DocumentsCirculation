@@ -31,7 +31,7 @@ namespace DocumentsCirculation.DAO
                     inside.signerID = Convert.ToInt32(reader["signerID"]);
                     inside.type = Convert.ToString(reader["type"]);
 
-                    inside.moneydifference = Convert.ToDecimal(reader["moneydifference"]);
+                    inside.moneydifference = Convert.ToInt32(reader["moneydifference"]);
                     inside.targetID = Convert.ToInt32(reader["targetID"]);
                     inside.documentID = Convert.ToInt32(reader["documentID"]);
 

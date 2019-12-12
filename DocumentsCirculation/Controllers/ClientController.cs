@@ -12,12 +12,14 @@ namespace DocumentsCirculation.Controllers
     {
         ClientDAO cli = new ClientDAO();
         // GET: Client
+        [Authorize(Roles = "SysAdmin, Administrator, Director")]
         public ActionResult ClientIndex()
         {
             return View(cli.GetAllClients());
         }
 
         // GET: Client/Details/5
+        [Authorize(Roles = "SysAdmin, Administrator, Director")]
         public ActionResult ClientDetails(int id)
         {
             List<Client> cliList = cli.GetAllClients();
@@ -31,6 +33,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: Client/Create
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult ClientCreate()
         {
             return View();
@@ -53,6 +56,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: Client/Edit/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult ClientEdit(int id)
         {
             List<Client> cliList = cli.GetAllClients();
@@ -82,6 +86,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: Client/Delete/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult ClientDelete(int id)
         {
             List<Client> cliList = cli.GetAllClients();

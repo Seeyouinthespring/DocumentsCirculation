@@ -14,12 +14,14 @@ namespace DocumentsCirculation.Controllers
         AdministrationDAO admin = new AdministrationDAO();
 
         // GET: DocReport
+        [Authorize(Roles = "SysAdmin, Administrator, Director, Analyst")]
         public ActionResult DocReportIndex()
         {
             return View(docreport.GetAllReports());
         }
 
         // GET: DocReport/Details/5
+        [Authorize(Roles = "SysAdmin, Administrator, Director, Analyst")]
         public ActionResult DocReportDetails(int id)
         {
             List<DocumentReport> drList = docreport.GetAllReports();
@@ -33,6 +35,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocReport/Create
+        [Authorize(Roles = "SysAdmin, Analyst")]
         public ActionResult DocReportCreate()
         {
             return View();
@@ -55,6 +58,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocReport/Edit/5
+        [Authorize(Roles = "SysAdmin, Analyst")]
         public ActionResult DocReportEdit(int id)
         {
             List<DocumentReport> drList = docreport.GetAllReports();
@@ -64,7 +68,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(drList[pos]);
+            if (drList[pos].status == "Подлежит редактированию" | drList[pos].status == "Создан")
+            {
+                return View(drList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocReport/Edit/5
@@ -84,6 +92,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocReport/Delete/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult DocReportDelete(int id)
         {
             List<DocumentReport> drList = docreport.GetAllReports();
@@ -93,7 +102,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(drList[pos]);
+            if (drList[pos].status == "Отправлен на удаление")
+            {
+                return View(drList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocReport/Delete/5

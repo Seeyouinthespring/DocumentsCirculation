@@ -1,0 +1,64 @@
+﻿@model DocumentsCirculation.Models.Worker
+
+@{
+    ViewBag.Title = "WorkerDelete";
+}
+
+<h2>Удаление работника</h2>
+
+<h3>Вы уверены что хотите удалить данные об этом работнике</h3>
+<div>
+    <h4>Работник</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.role)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("К списку работников", "WorkerIndex")
+        </div>
+    }
+</div>

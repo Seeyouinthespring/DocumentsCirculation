@@ -4,39 +4,47 @@
     ViewBag.Title = "AllIndex";
 }
 
-<h2>AllIndex</h2>
+<h2>Список всех документов</h2>
 
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.name)
+            Номер документа
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.creationdate)
+            Название
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.authorID)
+            Дата создания
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.status)
+            ID автора
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.comment)
+            Статус
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.shelflife)
+            Комментарий
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.signerID)
+            Хранить до
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.type)
+            ID подписывающего
         </th>
-        <th></th>
+        <th>
+            Тип
+        </th>
+        <th>
+            Действия
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.documentID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.name)
         </td>

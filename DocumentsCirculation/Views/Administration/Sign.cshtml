@@ -1,0 +1,19 @@
+﻿@model DocumentsCirculation.Models.Document
+
+@{
+    ViewBag.Title = "Sign";
+}
+
+<h2>Подписание</h2>
+
+<h3>Вы уверены что хотите ПОДПИСАТЬ документ @Html.DisplayFor(model => model.documentID) "@Html.DisplayFor(model => model.name)" ?</h3>
+<div>
+    <hr />
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Подписать" class="btn btn-default" /> |
+            @Html.ActionLink("К списку всех документов", "AllIndex")
+        </div>
+    }
+</div>

@@ -12,14 +12,16 @@ namespace DocumentsCirculation.Controllers
     {
         DocBuyDAO docbuy = new DocBuyDAO();
         AdministrationDAO admin = new AdministrationDAO();
-        
+
         // GET: DocBuy
+        [Authorize(Roles = "SysAdmin, Administrator, Director, BuyWorker")]
         public ActionResult DocBuyIndex()
         {
             return View(docbuy.GetAllBuys());
         }
 
         // GET: DocBuy/Details/5
+        [Authorize(Roles = "SysAdmin, Administrator, Director, BuyWorker")]
         public ActionResult DocBuyDetails(int id)
         {
             List<DocumentBuy> dbList = docbuy.GetAllBuys();
@@ -33,6 +35,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocBuy/Create
+        [Authorize(Roles = "SysAdmin, BuyWorker")]
         public ActionResult DocBuyCreate()
         {
             return View();
@@ -55,6 +58,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocBuy/Edit/5
+        [Authorize(Roles = "SysAdmin, BuyWorker")]
         public ActionResult DocBuyEdit(int id)
         {
             List<DocumentBuy> dbList = docbuy.GetAllBuys();
@@ -64,7 +68,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(dbList[pos]);
+            if (dbList[pos].status == "Подлежит редактированию"| dbList[pos].status == "Создан")
+            {
+                return View(dbList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocBuy/Edit/5
@@ -84,6 +92,7 @@ namespace DocumentsCirculation.Controllers
         }
 
         // GET: DocBuy/Delete/5
+        [Authorize(Roles = "SysAdmin, Administrator")]
         public ActionResult DocBuyDelete(int id)
         {
             List<DocumentBuy> dbList = docbuy.GetAllBuys();
@@ -93,7 +102,11 @@ namespace DocumentsCirculation.Controllers
                 {
                     pos = i;
                 }
-            return View(dbList[pos]);
+            if (dbList[pos].status == "Отправлен на удаление")
+            {
+                return View(dbList[pos]);
+            }
+            else return View("WrongStatus");
         }
 
         // POST: DocBuy/Delete/5

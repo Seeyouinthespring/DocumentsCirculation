@@ -114,10 +114,12 @@ C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\ru\Ent
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.csprojAssemblyReference.cache
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.csproj.CoreCompileInputs.cache
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.csproj.CopyComplete
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.dll
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.pdb
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\log4net.dll
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\log4net.xml
+C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\nunit.framework.dll
+C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\nunit.framework.pdb
+C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\nunit.framework.xml
