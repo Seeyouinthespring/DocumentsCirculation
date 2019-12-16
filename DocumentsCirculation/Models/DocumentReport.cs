@@ -8,10 +8,14 @@ namespace DocumentsCirculation.Models
 {
     public class DocumentReport: Document
     {
+
         public int documentreportID { get; set; }
+
+        [DataType(DataType.Date)]
         [Display(Name = "Дата начала подсчета статистики")]
         public DateTime startdate { get; set; }
 
+        [DataType(DataType.Date)]
         [Display(Name = "Дата конца подсчета статистики")]
         public DateTime enddate { get; set; }
 

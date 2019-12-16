@@ -1,0 +1,6 @@
+2019-12-16 23:51:39,311  INFO  DocumentsCirculation.DAO.ClientDAO GetAllClients Метод вызова всех клиентов
+2019-12-16 23:51:43,946  INFO  DocumentsCirculation.DAO.ClientDAO GetAllClients Метод вызова всех клиентов
+2019-12-16 23:51:52,704  INFO  DocumentsCirculation.DAO.ClientDAO GetAllClients Метод вызова всех клиентов
+2019-12-16 23:52:00,212  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-16 23:52:04,362  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-16 23:52:27,659  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок

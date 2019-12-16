@@ -6,7 +6,8 @@ namespace DocumentsCirculation.DAO
 {
     public class DAO
     {
-        private const string ConnectionString = @"Initial Catalog = DocCirculation;" + @"Data Source=.\SQLEXPRESS;" + @"Integrated Security=True;" + @"Pooling=False";
+        //private const string ConnectionString = @"Initial Catalog = DocCirculation;" + @"Data Source=.\SQLEXPRESS;" + @"Integrated Security=True;" + @"Pooling=False";
+        private readonly string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectDocCirculation"].ConnectionString;
 
         public SqlConnection Connection { get; set; }
 
@@ -14,6 +15,7 @@ namespace DocumentsCirculation.DAO
         {
             Connection = new SqlConnection(ConnectionString);
             Connection.Open();
+            Logger.InitLogger();
         }
 
         public void Disconnect()

@@ -1,0 +1,29 @@
+﻿@model DocumentsCirculation.Models.Document
+
+@{
+    ViewBag.Title = "SearchById";
+}
+
+<h2>Поиск по номеру</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    <form method="post" action="~/Controllers/Administration/SearchById">
+        <p>Введите номер документа</p>
+        <div class="col-md-10">
+            <input type="number" name="id" class="text-danger" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Искать" class="btn btn-default" />
+        </div>
+    </form>
+    <hr />
+</div>
+}
+<div>
+    @Html.ActionLink("К списку всех документов", "AllIndex")
+</div>

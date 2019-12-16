@@ -14,6 +14,7 @@ namespace DocumentsCirculation.Models
         [Display(Name = "Название")]
         public string name { get; set; }
 
+        [DataType(DataType.Date)]
         [Display(Name = "Дата создания")]
         public DateTime creationdate { get; set; }
 
@@ -26,6 +27,7 @@ namespace DocumentsCirculation.Models
         [Display(Name = "Комментарий")]
         public string comment { get; set; }
 
+        [DataType(DataType.Date)]
         [Display(Name = "Хранить до")]
         public DateTime shelflife { get; set; }
 

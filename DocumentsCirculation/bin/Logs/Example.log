@@ -1,11 +1,5 @@
-2019-12-13 00:01:47,890  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:05:45,289  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:05:45,377  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Метод удаления записи
-2019-12-13 00:05:45,382  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type:Внутренний
-2019-12-13 00:05:45,384  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type после закрытия reader:Внутренний
-2019-12-13 00:05:45,398  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:20:08,750  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:20:08,839  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Метод удаления записи
-2019-12-13 00:20:08,844  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type:Внутренний
-2019-12-13 00:20:08,846  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type после закрытия reader:Внутренний
-2019-12-13 00:20:08,859  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-16 22:37:23,720  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-16 22:37:24,477  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Метод удаления записи
+2019-12-16 22:37:24,497  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type:Внутренний
+2019-12-16 22:37:24,498  INFO  DocumentsCirculation.DAO.AdministrationDAO DropDoc Значение переменной doc.type после закрытия reader:Внутренний
+2019-12-16 22:37:24,567  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей

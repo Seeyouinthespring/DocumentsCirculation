@@ -14,9 +14,11 @@ namespace DocumentsCirculation.Models
         [Display(Name = "ФИО")]
         public string fio { get; set; }
 
+        [DataType(DataType.Date)]
         [Display(Name = "Дата рождения")]
         public DateTime birthdate { get; set; }
 
+        [DataType(DataType.Date)]
         [Display(Name = "Дата приема")]
         public DateTime employdate { get; set; }
 

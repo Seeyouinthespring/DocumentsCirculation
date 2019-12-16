@@ -1,14 +1,95 @@
-2019-12-13 00:23:19,143  INFO  DocumentsCirculation.DAO.WorkerDAO GetAllWorkers Метод вызова всех рабочих
-2019-12-13 00:24:58,193  INFO  DocumentsCirculation.DAO.WorkerDAO GetAllWorkers Метод вызова всех рабочих
-2019-12-13 00:30:25,770  INFO  DocumentsCirculation.DAO.ClientDAO GetAllClients Метод вызова всех клиентов
-2019-12-13 00:35:43,797  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-13 00:37:20,936  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-13 00:39:52,156  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
-2019-12-13 00:40:48,642  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-13 00:40:51,202  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-13 00:41:50,117  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
-2019-12-13 00:44:04,708  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:47:36,519  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:48:04,432  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
-2019-12-13 00:48:11,289  INFO  DocumentsCirculation.DAO.WorkerDAO GetAllWorkers Метод вызова всех рабочих
-2019-12-13 00:48:54,967  INFO  DocumentsCirculation.DAO.ClientDAO GetAllClients Метод вызова всех клиентов
+2019-12-17 00:36:20,710  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 00:40:18,073  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 00:49:48,231  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 00:55:43,591  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 00:59:26,442  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:01:45,008  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:02:40,934  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:04:29,723  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:07:24,018  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:10:10,770  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:10:10,813  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной documentID 14
+2019-12-17 01:10:10,849  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:10:28,626  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:10:41,522  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:15:08,337  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:15:08,386  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:15:23,184  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:15:23,209  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:15:51,740  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типаПокупки
+2019-12-17 01:15:51,754  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:19:04,722  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 0
+2019-12-17 01:19:04,749  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:19:04,750  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:19:04,791  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:19:16,096  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 0
+2019-12-17 01:19:16,098  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:19:16,099  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:19:16,123  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:21:17,753  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 0
+2019-12-17 01:21:17,783  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:21:17,785  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:21:17,815  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:22:06,944  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 0
+2019-12-17 01:22:06,955  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 0
+2019-12-17 01:22:06,956  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:22:06,957  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:22:07,015  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:36:16,954  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 20
+2019-12-17 01:36:16,981  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 20
+2019-12-17 01:36:16,983  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Отчет
+2019-12-17 01:36:56,128  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 15
+2019-12-17 01:36:56,137  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 15
+2019-12-17 01:36:56,138  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 15
+2019-12-17 01:36:56,139  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Отчет
+2019-12-17 01:37:12,179  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 13
+2019-12-17 01:37:12,187  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 13
+2019-12-17 01:37:12,188  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:37:12,190  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:37:12,204  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:37:19,247  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 14
+2019-12-17 01:37:19,254  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 14
+2019-12-17 01:37:19,255  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:37:19,256  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:37:19,267  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:37:44,628  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 13
+2019-12-17 01:37:44,634  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 13
+2019-12-17 01:37:44,635  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:37:44,636  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:37:44,648  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:38:01,011  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 25
+2019-12-17 01:38:01,018  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 25
+2019-12-17 01:38:01,019  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 25
+2019-12-17 01:38:01,022  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Внутренний
+2019-12-17 01:38:01,035  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-17 01:38:55,621  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 10
+2019-12-17 01:38:55,628  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 10
+2019-12-17 01:38:55,629  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:38:55,630  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:38:55,643  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:41:06,457  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 7
+2019-12-17 01:41:06,481  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:41:06,482  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:42:41,519  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 15
+2019-12-17 01:42:41,547  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 15
+2019-12-17 01:42:41,549  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Отчет
+2019-12-17 01:44:05,747  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 15
+2019-12-17 01:44:05,772  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 15
+2019-12-17 01:44:05,773  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Отчет
+2019-12-17 01:44:25,778  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 6
+2019-12-17 01:44:25,784  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 6
+2019-12-17 01:44:25,786  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной dList[pos].documentID 14
+2019-12-17 01:44:25,787  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной типа Покупки
+2019-12-17 01:44:25,801  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:50:35,736  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 25
+2019-12-17 01:50:35,783  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-17 01:50:50,016  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 14
+2019-12-17 01:50:50,040  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:51:01,185  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 01:51:29,101  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 5
+2019-12-17 01:51:57,533  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-17 01:52:12,136  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-17 01:52:42,305  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-17 02:20:35,881  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 14
+2019-12-17 02:20:35,939  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-17 02:20:49,417  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 2

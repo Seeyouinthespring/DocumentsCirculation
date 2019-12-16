@@ -13,27 +13,19 @@
         </tr>
         <tr>
             <td>@Html.RouteLink("Документы покупки", new { controller = "DocBuy", action = "DocBuyIndex" }, new { @class = "link" })</td>
-            <td>TBD</td>
-            <td></td>
-            <td></td>
+            <td>@Html.RouteLink("Поиск документов ожидающих подписания", new { controller = "Administration", action = "AllForSignIndex" }, new { @class = "link" })</td>
         </tr>
         <tr>
             <td>@Html.RouteLink("Документы продажи", new { controller = "DocSale", action = "DocSaleIndex" }, new { @class = "link" })</td>
-            <td>TBD</td>
-            <td></td>
-            <td></td>
+            <td>@Html.RouteLink("Поиск по номеру документа", new { controller = "Administration", action = "SearchById" }, new { @class = "link" })</td>
         </tr>
         <tr>
             <td>@Html.RouteLink("Документы отчета", new { controller = "DocReport", action = "DocReportIndex" }, new { @class = "link" })</td>
             <td>TBD</td>
-            <td></td>
-            <td></td>
         </tr>
         <tr>
             <td>@Html.RouteLink("Внутренние документы", new { controller = "DocInside", action = "DocInsideIndex" }, new { @class = "link" })</td>
             <td>TBD</td>
-            <td></td>
-            <td></td>
         </tr>
     </table>
 </div>

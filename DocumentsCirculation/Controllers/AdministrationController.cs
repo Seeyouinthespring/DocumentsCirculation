@@ -155,5 +155,54 @@ namespace DocumentsCirculation.Controllers
                 return View("Mistake");
             }
         }
+
+        // GET: Administration
+        [Authorize(Roles = "SysAdmin, Director")]
+        public ActionResult AllForSignIndex()
+        {
+            return View(admin.GetAllWaitingForSign());
+     
+        }
+
+        //Post
+        [HttpPost]
+        public ActionResult SearchById(int id)
+        {
+            string type= "---";
+            List<Document> dList = admin.GetAll();
+            for (int i = 0; i < dList.Count; i++)
+                if (id == dList[i].documentID)
+                {
+                    type = dList[i].type;
+                }
+            Logger.Log.Info("Значение переменной d.documentID " + id);
+            switch (type)
+            {
+                case "Продажи":
+                    return RedirectToRoute(new{ controller = "DocSale", action = "DocSaleDetails",id = id });
+                case "Покупки":
+                    return RedirectToRoute(new { controller = "DocBuy", action = "DocBuyDetails", id=id  });
+                case "Внутренний":
+                    return RedirectToRoute(new { controller = "DocInside", action = "DocInsideDetails", id= id });
+                case "Отчет":
+                    return RedirectToRoute(new { controller = "DocReport", action = "DocReportDetails", id= id });
+                default:
+                    return View("Mistake");
+            }
+        }
+
+        //Get
+        [Authorize(Roles = "SysAdmin, Director, Administrator")]
+        public ActionResult SearchById()
+        {
+            try
+            {
+                return View();
+            }
+            catch
+            {
+                return View("WrongStatus");
+            }
+        }
     }
 }

@@ -312,6 +312,9 @@
     <Content Include="Views\DocReport\WrongStatus.cshtml" />
     <Content Include="Views\DocSale\WrongStatus.cshtml" />
     <Content Include="Views\Worker\WorkerDelete.cshtml" />
+    <Content Include="Views\Administration\AllForSignIndex.cshtml" />
+    <Content Include="Views\Administration\SearchById.cshtml" />
+    <Content Include="Views\Administration\Mistake.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -123,3 +123,4 @@ C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\log4ne
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\nunit.framework.dll
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\nunit.framework.pdb
 C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\bin\nunit.framework.xml
+C:\Users\colya\source\repos\DocumentsCirculation\DocumentsCirculation\obj\Debug\DocumentsCirculation.csprojAssemblyReference.cache

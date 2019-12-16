@@ -193,5 +193,80 @@ namespace DocumentsCirculation.DAO
             }
             return DList;
         }
+
+        public List<Document> GetAllWaitingForSign()
+        {
+            Connect();
+            List<Document> DList = new List<Document>();
+            try
+            {
+                SqlCommand command = new SqlCommand("select * from Document where status='Отправлен на подписание'", Connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    DocumentSale doc = new DocumentSale();
+
+                    doc.documentID = Convert.ToInt32(reader["documentID"]);
+                    doc.name = Convert.ToString(reader["name"]);
+                    doc.creationdate = Convert.ToDateTime(reader["creationdate"]);
+                    doc.authorID = Convert.ToInt32(reader["authorID"]);
+                    doc.status = Convert.ToString(reader["status"]);
+                    doc.comment = Convert.ToString(reader["comment"]);
+                    doc.shelflife = Convert.ToDateTime(reader["shelflife"]);
+                    doc.signerID = Convert.ToInt32(reader["signerID"]);
+                    doc.type = Convert.ToString(reader["type"]);
+
+                    DList.Add(doc);
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
+                // Обработка исключения
+            }
+            finally
+            {
+                Disconnect();
+            }
+            return DList;
+        }
+
+        public Document GetById(int id)
+        {
+            Connect();
+            Document D = new Document();
+            try
+            {
+                string forsearch = string.Format("select * from Document where documentID='{0}'", id);
+                SqlCommand command = new SqlCommand(forsearch, Connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    DocumentSale doc = new DocumentSale();
+
+                    doc.documentID = Convert.ToInt32(reader["documentID"]);
+                    doc.name = Convert.ToString(reader["name"]);
+                    doc.creationdate = Convert.ToDateTime(reader["creationdate"]);
+                    doc.authorID = Convert.ToInt32(reader["authorID"]);
+                    doc.status = Convert.ToString(reader["status"]);
+                    doc.comment = Convert.ToString(reader["comment"]);
+                    doc.shelflife = Convert.ToDateTime(reader["shelflife"]);
+                    doc.signerID = Convert.ToInt32(reader["signerID"]);
+                    doc.type = Convert.ToString(reader["type"]);
+
+                    D = doc;
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
+                // Обработка исключения
+            }
+            finally
+            {
+                Disconnect();
+            }
+            return D;
+        }
     }
 }
