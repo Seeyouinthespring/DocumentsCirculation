@@ -4,12 +4,20 @@
     ViewBag.Title = "WorkerDetails";
 }
 
-<h2>Просмотр информации о работник</h2>
+<h2>Просмотр информации о работнике</h2>
 
 <div>
     <h4>Работник</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            Номер работника
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.workerID)
+        </dd>
+
         <dt>
             ФИО
         </dt>
@@ -48,6 +56,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.role)
+        </dd>
+
+        <dt>
+            Электронная почта
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
         </dd>
 
     </dl>

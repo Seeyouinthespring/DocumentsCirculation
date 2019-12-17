@@ -1,0 +1,70 @@
+﻿@model DocumentsCirculation.Models.Worker
+
+@{
+    ViewBag.Title = "WorkerAboutMyself";
+}
+
+<h2>Информация о работнике</h2>
+
+<div>
+    <h4>Ваши личные данные</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.workerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.workerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.role)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+    </dl>
+</div>

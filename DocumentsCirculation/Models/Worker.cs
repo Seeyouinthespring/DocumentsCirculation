@@ -28,6 +28,9 @@ namespace DocumentsCirculation.Models
         [Display(Name = "Должность")]
         public string role { get; set; }
 
+        [Display(Name = "Электронный адрес")]
+        public string email { get; set; }
+
         List<Worker> WorkerList { get; set; }
     }
 }

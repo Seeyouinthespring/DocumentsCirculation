@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.clientID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.officialname)
         </th>
         <th>
@@ -23,14 +26,17 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.clientID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.officialname)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.email)
         </td>
         <td>
-            @Html.ActionLink("Редактировать", "ClientEdit", new { id=item.clientID }) |
-            @Html.ActionLink("Просмотреть", "ClientDetails", new { id=item.clientID }) |
+            @Html.ActionLink("Редактировать", "ClientEdit", new { id = item.clientID }) |
+            @Html.ActionLink("Просмотреть", "ClientDetails", new { id = item.clientID }) |
             <!--@Html.ActionLink("Удалить", "ClientDelete", new { id=item.clientID })-->
         </td>
     </tr>

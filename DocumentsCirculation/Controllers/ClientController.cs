@@ -12,14 +12,14 @@ namespace DocumentsCirculation.Controllers
     {
         ClientDAO cli = new ClientDAO();
         // GET: Client
-        [Authorize(Roles = "SysAdmin, Administrator, Director")]
+        [Authorize]
         public ActionResult ClientIndex()
         {
             return View(cli.GetAllClients());
         }
 
         // GET: Client/Details/5
-        [Authorize(Roles = "SysAdmin, Administrator, Director")]
+        [Authorize]
         public ActionResult ClientDetails(int id)
         {
             List<Client> cliList = cli.GetAllClients();

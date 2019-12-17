@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>DocumentReport</h4>
+        <h4>Введите данные документа отчета</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -40,22 +40,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.comment, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.comment, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.comment, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.shelflife, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.shelflife, new { htmlAttributes = new { @class = "form-control" } })
@@ -68,14 +52,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.signerID, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.signerID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.type, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.type, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -105,14 +81,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Создать" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Назад", "DocReportIndex")
+    @Html.ActionLink("К списку документов отчета", "DocReportIndex")
 </div>
 
 @section Scripts {

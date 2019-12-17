@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    @Html.ActionLink("Личные данные", "WorkerAboutMyself", "Worker", new { login = User.Identity.GetUserName(), @class = "link" }, htmlAttributes: new { title = "Manage" })
+                </li>
+            </ul>
+        </div>
+    }
+}
+else
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>Вы не аутентифицированны</li>
+            </ul>
+        </div>
+    }
+}
+

@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.documentID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.name)
         </th>
         <th>
@@ -35,23 +38,14 @@
         <th>
             @Html.DisplayNameFor(model => model.type)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productammount_killo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productprice_for_killo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.sellerID)
-        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.documentID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.name)
         </td>
@@ -77,21 +71,9 @@
             @Html.DisplayFor(modelItem => item.type)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.productname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.productammount_killo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.productprice_for_killo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sellerID)
-        </td>
-        <td>
-            @Html.ActionLink("Редактировать", "DocBuyEdit", new { id=item.documentID })
-            @Html.ActionLink("Просмотреть", "DocBuyDetails", new { id=item.documentID })
-            @Html.ActionLink("Удалить", "DocBuyDelete", new { id=item.documentID })
+            @Html.ActionLink("Редактировать", "DocBuyEdit", new { id = item.documentID })
+            @Html.ActionLink("Просмотреть", "DocBuyDetails", new { id = item.documentID })
+            @Html.ActionLink("Удалить", "DocBuyDelete", new { id = item.documentID })
         </td>
     </tr>
 }

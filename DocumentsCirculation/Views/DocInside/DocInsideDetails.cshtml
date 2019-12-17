@@ -11,6 +11,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.documentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.documentID)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.name)
         </dt>
 
@@ -94,7 +102,7 @@
 </div>
 <hr />
 <p>
-    @Html.ActionLink("Редактировать", "DocInsideEdit", new { id = Model.documentID })
+    @Html.ActionLink("Редактировать", "DocInsideEdit", new { id = Model.documentID })|
     @Html.ActionLink("К списку внутренних документов", "DocInsideIndex")
 </p>
 <hr />
@@ -103,5 +111,6 @@
     @Html.RouteLink("Отправить на редактирование", new { controller = "Administration", action = "WriteComment", id = Model.documentID }, new { id = Model.documentID, @class = "link" }) |
     @Html.RouteLink("Отправить на подписание", new { controller = "Administration", action = "SendForSign", id = Model.documentID }, new { id = Model.documentID, @class = "link" }) |
     @Html.RouteLink("Подписать", new { controller = "Administration", action = "Sign", id = Model.documentID }, new { id = Model.documentID, @class = "link" }) |
-    @Html.RouteLink("Отправить на удаление", new { controller = "Administration", action = "SendForDrop", id = Model.documentID }, new { id = Model.documentID, @class = "link" })
+    @Html.RouteLink("Отправить на удаление", new { controller = "Administration", action = "SendForDrop", id = Model.documentID }, new { id = Model.documentID, @class = "link" })|
+    @Html.ActionLink("Удалить", "DocInsideDelete")
 </p>

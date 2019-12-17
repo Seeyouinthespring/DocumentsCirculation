@@ -88,7 +88,7 @@
                     <p>Не верный тип</p>
                     break;
             }
-            @switch (item.type)
+            @*@switch (item.type)
             {
                 case "Продажи":
                     @Html.RouteLink("Удалить", new { controller = "DocSale", action = "DocSaleDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
@@ -105,7 +105,7 @@
                 default:
                     <p>Не верный тип</p>
                     break;
-            }
+            }*@
         </td>
     </tr>
 }

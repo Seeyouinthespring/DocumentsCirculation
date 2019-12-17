@@ -114,5 +114,27 @@ namespace DocumentsCirculation.Controllers
                 return View("WorkerDelete");
             }
         }
+
+        [Authorize]
+        public ActionResult WorkerAboutMyself(string login)
+        {
+            Logger.InitLogger();
+            Logger.Log.Info("В метод передалось " +login);
+            if (login != null)
+            {
+                List<Worker> workerList = workerDAO.GetAllWorkers();
+                int pos = 0;
+                for (int i = 0; i < workerList.Count; i++)
+                    if (login.Equals(workerList[i].email))
+                    {
+                        pos = i;
+                    }
+                return View(workerList[pos]);
+            }
+            else
+            {
+                return View("Mistake");
+            }
+        }
     }
 }

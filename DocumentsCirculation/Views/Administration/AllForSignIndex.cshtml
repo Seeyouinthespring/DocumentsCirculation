@@ -9,6 +9,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.documentID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.name)
         </th>
         <th>
@@ -37,6 +40,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.documentID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.name)
         </td>
@@ -75,24 +81,6 @@
                     break;
                 case "Внутренний":
                     @Html.RouteLink("Просмотреть", new { controller = "DocInside", action = "DocInsideDetails", id = item.documentID }, new { id = item.documentID, @class = "link" })
-                    break;
-                default:
-                    <p>Не верный тип</p>
-                    break;
-            }
-            @switch (item.type)
-            {
-                case "Продажи":
-                    @Html.RouteLink("Удалить", new { controller = "DocSale", action = "DocSaleDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
-                    break;
-                case "Покупки":
-                    @Html.RouteLink("Удалить", new { controller = "DocBuy", action = "DocBuyDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
-                    break;
-                case "Отчет":
-                    @Html.RouteLink("Удалить", new { controller = "DocReport", action = "DocReportDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
-                    break;
-                case "Внутренний":
-                    @Html.RouteLink("Удалить", new { controller = "DocInside", action = "DocInsideDelete", id = item.documentID }, new { id = item.documentID, @class = "link" })
                     break;
                 default:
                     <p>Не верный тип</p>

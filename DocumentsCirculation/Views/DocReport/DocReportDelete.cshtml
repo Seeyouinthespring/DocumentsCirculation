@@ -8,9 +8,17 @@
 
 <h3>Вы уверены, что хотите удалить этот документ?</h3>
 <div>
-    <h4>DocumentReport</h4>
+    <h4>Документ отчета</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            Номер документа
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.documentID)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.name)
         </dt>

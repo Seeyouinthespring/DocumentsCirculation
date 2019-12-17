@@ -4,13 +4,16 @@
     ViewBag.Title = "WorkerIndex";
 }
 
-<h2>Список рабочих</h2>
+<h2>Список работников</h2>
 
 <p>
-    @Html.ActionLink("Добавить рабочего", "WorkerCreate")
+    @Html.ActionLink("Добавить работника", "WorkerCreate")
 </p>
 <table class="table">
     <tr>
+        <th>
+            Номер работника
+        </th>
         <th>
             ФИО
         </th>
@@ -26,11 +29,17 @@
         <th>
             Должность
         </th>
+        <th>
+            Электронный адресс
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.workerID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.fio)
         </td>
@@ -45,6 +54,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
         </td>
         <td>
             @Html.ActionLink("Редактировать", "WorkerEdit", new { id = item.workerID }) |

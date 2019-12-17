@@ -27,6 +27,7 @@ namespace DocumentsCirculation.DAO
                     worker.employdate = Convert.ToDateTime(reader["employdate"]);
                     worker.salary = Convert.ToDecimal(reader["salary"]);
                     worker.role = Convert.ToString(reader["role"]);
+                    worker.email = Convert.ToString(reader["email"]);
 
                     WList.Add(worker);
                 }
@@ -50,14 +51,15 @@ namespace DocumentsCirculation.DAO
 
             try
             {
-                SqlCommand add = new SqlCommand("insert into Worker (fio, birthdate, employdate, salary, role) "
-                    + "VALUES (@fio, @birthdate, @employdate, @salary, @role)", Connection);
+                SqlCommand add = new SqlCommand("insert into Worker (fio, birthdate, employdate, salary, role, email) "
+                    + "VALUES (@fio, @birthdate, @employdate, @salary, @role @email)", Connection);
 
                 add.Parameters.Add(new SqlParameter("@fio", worker.fio));
                 add.Parameters.Add(new SqlParameter("@birthdate", worker.birthdate));
                 add.Parameters.Add(new SqlParameter("@employdate", worker.employdate));
                 add.Parameters.Add(new SqlParameter("@salary", worker.salary));
                 add.Parameters.Add(new SqlParameter("@role", worker.role));
+                add.Parameters.Add(new SqlParameter("@email", worker.email));
 
                 add.ExecuteNonQuery();
             }
@@ -98,7 +100,7 @@ namespace DocumentsCirculation.DAO
 
             try
             {
-                string updatestring = string.Format("update Worker set fio=@fio, birthdate=@birthdate, employdate=@employdate, salary=@salary, role=@role where workerID='{0}'", id);
+                string updatestring = string.Format("update Worker set fio=@fio, birthdate=@birthdate, employdate=@employdate, salary=@salary, role=@role, email=@email where workerID='{0}'", id);
 
                 SqlCommand change = new SqlCommand(updatestring, Connection);
 
@@ -107,6 +109,7 @@ namespace DocumentsCirculation.DAO
                 change.Parameters.AddWithValue("@employdate", worker.employdate);
                 change.Parameters.AddWithValue("@salary", worker.salary);
                 change.Parameters.AddWithValue("@role", worker.role);
+                change.Parameters.AddWithValue("@email", worker.email);
                 change.ExecuteNonQuery();
             }
             catch (Exception)
