@@ -120,5 +120,5 @@
     @Html.RouteLink("Отправить на подписание", new { controller = "Administration", action = "SendForSign", id = Model.documentID }, new { id = Model.documentID, @class = "link" }) |
     @Html.RouteLink("Подписать", new { controller = "Administration", action = "Sign", id = Model.documentID }, new { id = Model.documentID, @class = "link" }) |
     @Html.RouteLink("Отправить на удаление", new { controller = "Administration", action = "SendForDrop", id = Model.documentID }, new { id = Model.documentID, @class = "link" })|
-    @Html.ActionLink("Удалить", "DocReportDelete")
+    @Html.ActionLink("Удалить", "DocReportDelete", new { id = Model.documentID })
 </p>

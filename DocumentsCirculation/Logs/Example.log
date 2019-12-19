@@ -22,3 +22,11 @@
 2019-12-19 03:04:10,783  INFO  DocumentsCirculation.DAO.ClientDAO GetAllClients Метод вызова всех клиентов
 2019-12-19 03:04:26,650  INFO  DocumentsCirculation.Controllers.AdministrationController SearchById Значение переменной d.documentID 20
 2019-12-19 03:05:29,418  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-19 18:20:06,596  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-19 18:20:48,349  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-19 18:21:40,156  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-19 18:22:12,950  INFO  DocumentsCirculation.DAO.DocBuyDAO GetAllBuys Метод вызова всех записей покупок
+2019-12-19 18:22:25,017  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-19 18:22:31,149  INFO  DocumentsCirculation.DAO.DocSaleDAO GetAllSales Метод вызова всех записей
+2019-12-19 18:23:44,276  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
+2019-12-19 18:24:45,330  INFO  DocumentsCirculation.DAO.DocInsideDAO GetAllInsides Метод вызова всех записей
